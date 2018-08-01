@@ -8,29 +8,49 @@
 
 import UIKit
 import QRCode
+import FirebaseAuth
+import FirebaseDatabase
 
 class MainViewController: UIViewController {
     
     @IBOutlet weak var qrCodeImageView: UIImageView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblCode: UILabel!
-    var userCode :String = "N55Test"
-    var userName: String = "Shimaa Magdi"
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblCode.text = userCode
-        lblName.text = userName
-        qrCodeImageView.image = {
-            var qrCode = QRCode(userCode)!
-            qrCode.size = self.qrCodeImageView.bounds.size
-            qrCode.color = CIColor(rgba: "16a085")
-            qrCode.backgroundColor = CIColor(rgba: "000")
-            return qrCode.image
-        }()
-        
+        setUpUserData()
     }
     
     
     
+    static func create(){
+        
+    }
+    private func setUpUserData() {
+        ref = Database.database().reference()
+        if let userID = Auth.auth().currentUser?.uid{
+            let userData = ref.child("users").child(userID)
+            userData.child("qr").observeSingleEvent(of: .value, with: { snapShot in
+                if let qrCode = snapShot.value as? String{
+                    self.lblCode.text = qrCode
+                    self.qrCodeImageView.image = {
+                        var qrCode = QRCode(qrCode)!
+                        qrCode.size = self.qrCodeImageView.bounds.size
+                        qrCode.color = CIColor(rgba: "16a085")
+                        qrCode.backgroundColor = CIColor(rgba: "000")
+                        return qrCode.image
+                    }()
+                }
+            })
+            
+            userData.child("name").observeSingleEvent(of: .value, with: { snapShot in
+                if let username = snapShot.value as? String{
+                    self.lblName.text = username
+                }
+            })
+        }
+    }
     
 }
