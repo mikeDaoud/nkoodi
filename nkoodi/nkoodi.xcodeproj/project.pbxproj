@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C3A82F1A2A8C6DB769CDB7F /* Pods_nkoodi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB365502B92D7A3116B595B /* Pods_nkoodi.framework */; };
+		7062B55F21123C9E009F3E26 /* Acens.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7062B55E21123C9D009F3E26 /* Acens.ttf */; };
 		8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9BDB4C21122607001070F5 /* AppDelegate.swift */; };
 		8A9BDB4F21122607001070F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9BDB4E21122607001070F5 /* ViewController.swift */; };
 		8A9BDB5221122607001070F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5021122607001070F5 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		3FB365502B92D7A3116B595B /* Pods_nkoodi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nkoodi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7062B55E21123C9D009F3E26 /* Acens.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Acens.ttf; sourceTree = "<group>"; };
 		8A9BDB4921122607001070F5 /* nkoodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nkoodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9BDB4C21122607001070F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A9BDB4E21122607001070F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7062B55D21123C7E009F3E26 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				7062B55E21123C9D009F3E26 /* Acens.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 		8A9BDB4021122607001070F5 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +87,7 @@
 				8A9BDB5021122607001070F5 /* Main.storyboard */,
 				8A9BDB5321122607001070F5 /* Assets.xcassets */,
 				8A9BDB5521122607001070F5 /* LaunchScreen.storyboard */,
+				7062B55D21123C7E009F3E26 /* font */,
 				8A9BDB5821122607001070F5 /* Info.plist */,
 			);
 			path = nkoodi;
@@ -152,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7062B55F21123C9E009F3E26 /* Acens.ttf in Resources */,
 				8A9BDB5721122607001070F5 /* LaunchScreen.storyboard in Resources */,
 				8A9BDB5F2112271D001070F5 /* GoogleService-Info.plist in Resources */,
 				8A9BDB5421122607001070F5 /* Assets.xcassets in Resources */,
@@ -169,15 +181,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-nkoodi/Pods-nkoodi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BATabBarController/BATabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BATabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
