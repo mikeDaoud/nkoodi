@@ -12,11 +12,14 @@ import QRCode
 class MainViewController: UIViewController {
     
     @IBOutlet weak var qrCodeImageView: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblCode: UILabel!
     var userCode :String = "N55Test"
-    
+    var userName: String = "Shimaa Magdi"
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        lblCode.text = userCode
+        lblName.text = userName
         qrCodeImageView.image = {
             var qrCode = QRCode(userCode)!
             qrCode.size = self.qrCodeImageView.bounds.size

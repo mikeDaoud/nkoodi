@@ -17,6 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsP-Xd-tEf" userLabel="NameLabel">
+                                <rect key="frame" x="165" y="93" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lY4-6O-7hQ">
                                 <rect key="frame" x="37" y="193.5" width="300" height="300"/>
                                 <constraints>
@@ -24,23 +30,27 @@
                                     <constraint firstAttribute="width" constant="300" id="9e5-fy-bUo"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnS-2X-Zch">
-                                <rect key="frame" x="299" y="64" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="ou0-Sk-l8t" kind="show" id="w4p-1I-UOM"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcs-0S-WGR" userLabel="NameLabel">
+                                <rect key="frame" x="165" y="505.5" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lY4-6O-7hQ" firstAttribute="centerY" secondItem="ZWp-pw-D2j" secondAttribute="centerY" id="8O4-2M-mgF"/>
+                            <constraint firstItem="lsP-Xd-tEf" firstAttribute="top" secondItem="ZWp-pw-D2j" secondAttribute="top" constant="73" id="8S5-g7-Fsz"/>
                             <constraint firstItem="lY4-6O-7hQ" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="GTa-AI-v3L"/>
+                            <constraint firstItem="lsP-Xd-tEf" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="afk-lH-f6B"/>
+                            <constraint firstItem="pcs-0S-WGR" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="gAm-uz-QEZ"/>
+                            <constraint firstItem="pcs-0S-WGR" firstAttribute="top" secondItem="lY4-6O-7hQ" secondAttribute="bottom" constant="12" id="upf-df-uRb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZWp-pw-D2j"/>
                     </view>
                     <connections>
+                        <outlet property="lblCode" destination="pcs-0S-WGR" id="LnI-um-ElH"/>
+                        <outlet property="lblName" destination="lsP-Xd-tEf" id="8lt-VD-ijY"/>
                         <outlet property="qrCodeImageView" destination="lY4-6O-7hQ" id="iZV-YV-fEI"/>
                     </connections>
                 </viewController>
