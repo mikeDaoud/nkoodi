@@ -11,24 +11,28 @@ import AVFoundation
 
 class QRCodeReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var viewPreview: UIView!
-    @IBOutlet weak var lblString: UILabel!
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
     var isReading: Bool = false
+    var qrReadingCompletion: ((String)->())?
+    
+    public static func create() -> QRCodeReaderViewController {
+        return UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: String(describing: self)) as! QRCodeReaderViewController
+    }
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewPreview.layer.cornerRadius = 5;
         captureSession = nil;
-        lblString.text = "Barcode discription...";
+//        lblString.text = "Barcode description...";
         start()
     }
     
     func start(){
         if !isReading {
             if (self.startReading()) {
-                lblString.text = "Scanning for QR Code..."
+//                lblString.text = "Scanning for QR Code..."
             }
         }
         else {
@@ -78,13 +82,19 @@ class QRCodeReaderViewController: UIViewController, AVCaptureMetadataOutputObjec
             print(metaData.description)
             let transformed = videoPreviewLayer?.transformedMetadataObject(for: metaData) as? AVMetadataMachineReadableCodeObject
             if let unwraped = transformed {
-                print(unwraped.stringValue)
-                lblString.text = unwraped.stringValue
                 self.performSelector(onMainThread: #selector(stopReading), with: nil, waitUntilDone: false)
                 isReading = false;
+                self.dismiss(animated: true, completion: {
+                    self.qrReadingCompletion?(unwraped.stringValue)
+                })
             }
         }
     }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 

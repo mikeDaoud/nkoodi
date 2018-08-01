@@ -11,5 +11,4 @@ target 'nkoodi' do
   pod 'Firebase/Auth'
   pod 'QRCode'
   pod 'BATabBarController'
-
 end
