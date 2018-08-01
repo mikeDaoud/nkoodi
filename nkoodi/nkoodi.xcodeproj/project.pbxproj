@@ -15,6 +15,9 @@
 		8A9BDB5421122607001070F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5321122607001070F5 /* Assets.xcassets */; };
 		8A9BDB5721122607001070F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5521122607001070F5 /* LaunchScreen.storyboard */; };
 		8A9BDB5F2112271D001070F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5E2112271D001070F5 /* GoogleService-Info.plist */; };
+		D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE396F21122BF200AF8D73 /* QRCodeReaderViewController.swift */; };
+		D4EE397221122C2700AF8D73 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE397121122C2700AF8D73 /* BalanceViewController.swift */; };
+		D4EE397421122C4900AF8D73 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE397321122C4900AF8D73 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		8A9BDB5821122607001070F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A9BDB5E2112271D001070F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99108625AC17317141A7F44A /* Pods-nkoodi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nkoodi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nkoodi/Pods-nkoodi.debug.xcconfig"; sourceTree = "<group>"; };
+		D4EE396F21122BF200AF8D73 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
+		D4EE397121122C2700AF8D73 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		D4EE397321122C4900AF8D73 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D698B628A1A3A4703566F555 /* Pods-nkoodi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nkoodi.release.xcconfig"; path = "Pods/Target Support Files/Pods-nkoodi/Pods-nkoodi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +95,9 @@
 				8A9BDB5521122607001070F5 /* LaunchScreen.storyboard */,
 				7062B55D21123C7E009F3E26 /* font */,
 				8A9BDB5821122607001070F5 /* Info.plist */,
+				D4EE396F21122BF200AF8D73 /* QRCodeReaderViewController.swift */,
+				D4EE397121122C2700AF8D73 /* BalanceViewController.swift */,
+				D4EE397321122C4900AF8D73 /* MainViewController.swift */,
 			);
 			path = nkoodi;
 			sourceTree = "<group>";
@@ -185,6 +194,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -194,6 +204,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -227,8 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */,
 				8A9BDB4F21122607001070F5 /* ViewController.swift in Sources */,
 				8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */,
+				D4EE397221122C2700AF8D73 /* BalanceViewController.swift in Sources */,
+				D4EE397421122C4900AF8D73 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,14 +380,16 @@
 			baseConfigurationReference = 99108625AC17317141A7F44A /* Pods-nkoodi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 855NGKW9YC;
+				DEVELOPMENT_TEAM = SK6WUB3TZG;
 				INFOPLIST_FILE = nkoodi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hajjhackathon.com.nkoodi;
+				PRODUCT_BUNDLE_IDENTIFIER = HajjHackathon.Nkoodi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -383,14 +399,16 @@
 			baseConfigurationReference = D698B628A1A3A4703566F555 /* Pods-nkoodi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 855NGKW9YC;
+				DEVELOPMENT_TEAM = SK6WUB3TZG;
 				INFOPLIST_FILE = nkoodi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hajjhackathon.com.nkoodi;
+				PRODUCT_BUNDLE_IDENTIFIER = HajjHackathon.Nkoodi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

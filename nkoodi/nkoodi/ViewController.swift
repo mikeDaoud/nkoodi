@@ -29,24 +29,24 @@ class ViewController: UIViewController {
         vc5.view.backgroundColor = UIColor(hex: 0x00c6c10)
         
         let option1 = NSMutableAttributedString(string: "QR")
-        option1.addAttribute(.foregroundColor, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option1.length))
-        option1.addAttribute(.font, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option1.length))
+        option1.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option1.length))
+        option1.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option1.length))
         let tabBarItem = BATabBarItem(image: UIImage(named: "ico_01")?.withRenderingMode(.alwaysTemplate).maskWithColor(color: UIColor(hex: 0x757575)), selectedImage: UIImage(named: "ico_01")?.withRenderingMode(.alwaysTemplate).maskWithColor(color: UIColor(hex: 0x00c6c35)), title: option1)
         let option2 = NSMutableAttributedString(string: "Balance")
-        option2.addAttribute(.font, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option2.length))
-        option2.addAttribute(.foregroundColor, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option2.length))
+        option2.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option2.length))
+        option2.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option2.length))
         let tabBarItem2 = BATabBarItem(image: UIImage(named: "ico_02")?.withRenderingMode(.alwaysTemplate).maskWithColor(color: UIColor(hex: 0x757575)), selectedImage: UIImage(named: "ico_02")?.withRenderingMode(.alwaysTemplate).maskWithColor(color: UIColor(hex: 0x00c6c35)), title: option2)
         let option3 = NSMutableAttributedString(string: "Transfer")
-        option3.addAttribute(.font, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option3.length))
-        option3.addAttribute(.foregroundColor, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option3.length))
+        option3.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option3.length))
+        option3.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option3.length))
         let tabBarItem3 = BATabBarItem(image: UIImage(named: "ico_03")?.withRenderingMode(.alwaysTemplate).maskWithColor(color: UIColor(hex: 0x757575)), selectedImage: UIImage(named: "ico_03")?.withRenderingMode(.alwaysTemplate).maskWithColor(color: UIColor(hex: 0x00c6c35)), title: option3)
         let option4 = NSMutableAttributedString(string: "Stores")
-        option4.addAttribute(.font, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option4.length))
-        option4.addAttribute(.foregroundColor, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option4.length))
+        option4.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option4.length))
+        option4.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option4.length))
         let tabBarItem4 = BATabBarItem(image: UIImage(named: "ico_04")?.withRenderingMode(.alwaysTemplate).maskWithColor(color: UIColor(hex: 0x757575)), selectedImage: UIImage(named: "ico_04")?.withRenderingMode(.alwaysTemplate).maskWithColor(color: UIColor(hex: 0x00c6c35)), title: option4)
         let option5 = NSMutableAttributedString(string: "More")
-        option5.addAttribute(.font, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option5.length))
-        option5.addAttribute(.foregroundColor, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option5.length))
+        option5.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option5.length))
+        option5.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option5.length))
         let tabBarItem5 = BATabBarItem(image: UIImage(named: "ico_05")?.withRenderingMode(.alwaysTemplate).maskWithColor(color: UIColor(hex: 0x757575)), selectedImage: UIImage(named: "ico_05")?.withRenderingMode(.alwaysTemplate).maskWithColor(color: UIColor(hex: 0x00c6c35)), title: option5)
         baTabBarController = BATabBarController()
         baTabBarController.tabBarItemStrokeColor = UIColor(hex: 0x00c6c35)
@@ -67,7 +67,6 @@ class ViewController: UIViewController {
 
 
 }
-
 
 extension ViewController: BATabBarControllerDelegate{
     func tabBarController(_ tabBarController: BATabBarController!, didSelect viewController: UIViewController!) {
@@ -101,11 +100,4 @@ extension UIImage {
         }
     }
 }
-
-//class NkoodiFont: UIFont {
-//    func getNkoodiFont(size: CGFont) -> UIFont {
-//        self.
-//        return self.withSize(size)
-//    }
-//}
 
