@@ -1,6 +1,9 @@
 PODS:
   - BATabBarController (0.1.5):
     - Masonry
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
   - Firebase/Auth (5.4.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.2)
@@ -42,6 +45,7 @@ PODS:
 
 DEPENDENCIES:
   - BATabBarController
+  - Charts
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -50,6 +54,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BATabBarController
+    - Charts
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -65,6 +70,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   BATabBarController: 5613abe7e9e840e4d47deecef6f5082187b24ecf
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
   FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
@@ -78,6 +84,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
 
-PODFILE CHECKSUM: 2b8b3c795c3c086f27415aadbd7357bfdb1b5a08
+PODFILE CHECKSUM: 750d507c64b69c6ba62f38545ae38a15d170a2b5
 
 COCOAPODS: 1.5.3
