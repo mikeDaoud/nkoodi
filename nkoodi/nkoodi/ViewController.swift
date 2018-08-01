@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let vc1 = UIViewController()
+        let vc1 = MainViewController.create()
         let vc2 = UIViewController()
         let vc3 = UIViewController()
         let vc4 = UIViewController()

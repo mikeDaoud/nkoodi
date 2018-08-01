@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class MainViewController: UIViewController {
-    
+    static let ID = "MainViewController"
     @IBOutlet weak var qrCodeImageView: UIImageView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblCode: UILabel!
@@ -24,10 +24,11 @@ class MainViewController: UIViewController {
     }
     
     
-    
-    static func create(){
-        
+    static func create() -> MainViewController {
+        return UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier:
+            MainViewController.ID) as! MainViewController
     }
+    
     private func setUpUserData() {
         ref = Database.database().reference()
         if let userID = Auth.auth().currentUser?.uid{
