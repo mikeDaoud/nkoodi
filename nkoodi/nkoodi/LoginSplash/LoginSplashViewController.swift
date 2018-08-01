@@ -12,6 +12,7 @@ import FirebaseAuth
 class LoginSplashViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var name: UITextField!
     
     @IBAction func login(_ sender: Any) {
         if let email = email.text,
@@ -27,8 +28,16 @@ class LoginSplashViewController: UIViewController {
         if let email = email.text,
             let pass = password.text{
             Auth.auth().createUser(withEmail: email, password: pass) { (result, err) in
-                guard err == nil else {return}
-                self.proceedToApp()
+                guard err == nil, let userId = result?.user.uid else {return}
+                let user = User(qr: CodeGenerator.generateRandomCode(),
+                                name: self.name.text ?? "User",
+                                id: userId)
+                DataStore.shared.initUser(user, completion: { (created) in
+                    if created{
+                        self.proceedToApp()
+                    }
+                })
+                
             }
         }
     }

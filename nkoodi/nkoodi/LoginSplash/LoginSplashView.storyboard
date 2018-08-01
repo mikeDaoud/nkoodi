@@ -43,24 +43,34 @@
                                     <action selector="register:" destination="R7W-0P-g90" eventType="touchUpInside" id="ud0-xS-oaf"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QyM-V2-u3F">
+                                <rect key="frame" x="50" y="174" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="X0z-5x-aS7" firstAttribute="centerX" secondItem="Nhg-me-SsN" secondAttribute="centerX" id="2Dk-oh-szw"/>
                             <constraint firstItem="X0z-5x-aS7" firstAttribute="top" secondItem="Nhg-me-SsN" secondAttribute="bottom" constant="32" id="41l-qA-E5f"/>
-                            <constraint firstItem="mQO-hG-bZu" firstAttribute="top" secondItem="H83-s9-gYH" secondAttribute="top" constant="221" id="51h-W4-sia"/>
+                            <constraint firstItem="QyM-V2-u3F" firstAttribute="trailing" secondItem="mQO-hG-bZu" secondAttribute="trailing" id="D7r-8o-FaH"/>
                             <constraint firstItem="Nhg-me-SsN" firstAttribute="trailing" secondItem="mQO-hG-bZu" secondAttribute="trailing" id="Kam-Ud-cuV"/>
                             <constraint firstItem="Nhg-me-SsN" firstAttribute="leading" secondItem="mQO-hG-bZu" secondAttribute="leading" id="LgX-VS-Int"/>
                             <constraint firstItem="mQO-hG-bZu" firstAttribute="leading" secondItem="H83-s9-gYH" secondAttribute="leading" constant="50" id="PVw-FX-G4G"/>
                             <constraint firstItem="6Vb-L2-Iop" firstAttribute="top" secondItem="X0z-5x-aS7" secondAttribute="bottom" constant="18" id="Vdr-gb-87v"/>
                             <constraint firstItem="6Vb-L2-Iop" firstAttribute="centerX" secondItem="X0z-5x-aS7" secondAttribute="centerX" id="XXo-Es-h7z"/>
                             <constraint firstItem="Nhg-me-SsN" firstAttribute="top" secondItem="mQO-hG-bZu" secondAttribute="bottom" constant="32" id="YEb-GT-O4l"/>
+                            <constraint firstItem="QyM-V2-u3F" firstAttribute="leading" secondItem="mQO-hG-bZu" secondAttribute="leading" id="Zu8-8f-zJU"/>
                             <constraint firstItem="H83-s9-gYH" firstAttribute="trailing" secondItem="mQO-hG-bZu" secondAttribute="trailing" constant="50" id="g1w-aq-XQl"/>
+                            <constraint firstItem="QyM-V2-u3F" firstAttribute="top" secondItem="H83-s9-gYH" secondAttribute="top" constant="154" id="j3b-QQ-iGv"/>
+                            <constraint firstItem="mQO-hG-bZu" firstAttribute="top" secondItem="QyM-V2-u3F" secondAttribute="bottom" constant="37" id="p93-EH-sto"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H83-s9-gYH"/>
                     </view>
                     <connections>
                         <outlet property="email" destination="mQO-hG-bZu" id="KOR-FU-6uG"/>
+                        <outlet property="name" destination="QyM-V2-u3F" id="tVX-DS-0M6"/>
                         <outlet property="password" destination="Nhg-me-SsN" id="SwL-vc-0Ej"/>
                     </connections>
                 </viewController>
