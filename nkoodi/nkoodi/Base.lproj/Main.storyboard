@@ -1,24 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qRy-08-ruA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main View Controller-->
+        <scene sceneID="mlM-Z4-Xov">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qRy-08-ruA" customClass="MainViewController" customModule="nkoodi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rjo-ZW-hs2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lY4-6O-7hQ">
+                                <rect key="frame" x="37" y="193.5" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="5Ud-nY-XQC"/>
+                                    <constraint firstAttribute="width" constant="300" id="9e5-fy-bUo"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnS-2X-Zch">
+                                <rect key="frame" x="299" y="64" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="ou0-Sk-l8t" kind="show" id="w4p-1I-UOM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="lY4-6O-7hQ" firstAttribute="centerY" secondItem="ZWp-pw-D2j" secondAttribute="centerY" id="8O4-2M-mgF"/>
+                            <constraint firstItem="lY4-6O-7hQ" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="GTa-AI-v3L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZWp-pw-D2j"/>
                     </view>
+                    <connections>
+                        <outlet property="qrCodeImageView" destination="lY4-6O-7hQ" id="iZV-YV-fEI"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKT-Nl-a82" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="599" y="169"/>
+        </scene>
+        <!--Code Reader View Controller-->
+        <scene sceneID="0Tc-BF-HPu">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeReaderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ou0-Sk-l8t" customClass="QRCodeReaderViewController" customModule="nkoodi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lDA-QQ-bD2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daQ-8L-CV7">
+                                <rect key="frame" x="37.5" y="193.5" width="300" height="300"/>
+                                <color key="backgroundColor" red="0.28724679939999997" green="0.57891434590000002" blue="0.27918303020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Htl-0v-lfk"/>
+                                    <constraint firstAttribute="width" constant="300" id="NMR-u7-5lr"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="aHo-Gv-dbO">
+                                <rect key="frame" x="187.5" y="505.5" width="0.0" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="yWK-kf-Tdv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.86666666670000003" green="0.062745098040000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aHo-Gv-dbO" firstAttribute="top" secondItem="daQ-8L-CV7" secondAttribute="bottom" constant="12" id="7QR-Wj-PU0"/>
+                            <constraint firstItem="daQ-8L-CV7" firstAttribute="centerY" secondItem="VWA-Ki-Vj4" secondAttribute="centerY" id="ajq-y6-rGW"/>
+                            <constraint firstItem="aHo-Gv-dbO" firstAttribute="centerX" secondItem="VWA-Ki-Vj4" secondAttribute="centerX" id="cyx-ro-Czq"/>
+                            <constraint firstItem="daQ-8L-CV7" firstAttribute="centerX" secondItem="VWA-Ki-Vj4" secondAttribute="centerX" id="xLH-Nn-fuS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VWA-Ki-Vj4"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblString" destination="aHo-Gv-dbO" id="CQq-eG-yo4"/>
+                        <outlet property="viewPreview" destination="daQ-8L-CV7" id="r2j-FQ-GNB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rnD-p4-GEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="111"/>
         </scene>
     </scenes>
 </document>
