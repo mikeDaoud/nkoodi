@@ -10,8 +10,6 @@
 		6C3A82F1A2A8C6DB769CDB7F /* Pods_nkoodi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB365502B92D7A3116B595B /* Pods_nkoodi.framework */; };
 		7062B55F21123C9E009F3E26 /* Acens.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7062B55E21123C9D009F3E26 /* Acens.ttf */; };
 		8A335A21211257E1006517FC /* LoginSplashView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A335A20211257E1006517FC /* LoginSplashView.storyboard */; };
-		7062B60F211256DF009F3E26 /* QRReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7062B60E211256DF009F3E26 /* QRReader.storyboard */; };
-		7062B6112112572E009F3E26 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7062B6102112572E009F3E26 /* QRReaderViewController.swift */; };
 		8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9BDB4C21122607001070F5 /* AppDelegate.swift */; };
 		8A9BDB4F21122607001070F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9BDB4E21122607001070F5 /* ViewController.swift */; };
 		8A9BDB5221122607001070F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5021122607001070F5 /* Main.storyboard */; };
@@ -19,6 +17,8 @@
 		8A9BDB5721122607001070F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5521122607001070F5 /* LaunchScreen.storyboard */; };
 		8A9BDB5F2112271D001070F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5E2112271D001070F5 /* GoogleService-Info.plist */; };
 		D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D0332112504F00329A79 /* LoginSplashViewController.swift */; };
+		D4B8D039211272DE00329A79 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D037211272DE00329A79 /* QRReaderViewController.swift */; };
+		D4B8D03A211272DE00329A79 /* QRReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B8D038211272DE00329A79 /* QRReader.storyboard */; };
 		D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE396F21122BF200AF8D73 /* QRCodeReaderViewController.swift */; };
 		D4EE397221122C2700AF8D73 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE397121122C2700AF8D73 /* BalanceViewController.swift */; };
 		D4EE397421122C4900AF8D73 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE397321122C4900AF8D73 /* MainViewController.swift */; };
@@ -28,8 +28,6 @@
 		3FB365502B92D7A3116B595B /* Pods_nkoodi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nkoodi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7062B55E21123C9D009F3E26 /* Acens.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Acens.ttf; sourceTree = "<group>"; };
 		8A335A20211257E1006517FC /* LoginSplashView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSplashView.storyboard; sourceTree = "<group>"; };
-		7062B60E211256DF009F3E26 /* QRReader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRReader.storyboard; sourceTree = "<group>"; };
-		7062B6102112572E009F3E26 /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		8A9BDB4921122607001070F5 /* nkoodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nkoodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9BDB4C21122607001070F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A9BDB4E21122607001070F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +38,8 @@
 		8A9BDB5E2112271D001070F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99108625AC17317141A7F44A /* Pods-nkoodi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nkoodi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nkoodi/Pods-nkoodi.debug.xcconfig"; sourceTree = "<group>"; };
 		D4B8D0332112504F00329A79 /* LoginSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSplashViewController.swift; sourceTree = "<group>"; };
+		D4B8D037211272DE00329A79 /* QRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
+		D4B8D038211272DE00329A79 /* QRReader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRReader.storyboard; sourceTree = "<group>"; };
 		D4EE396F21122BF200AF8D73 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
 		D4EE397121122C2700AF8D73 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		D4EE397321122C4900AF8D73 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +105,7 @@
 		8A9BDB4B21122607001070F5 /* nkoodi */ = {
 			isa = PBXGroup;
 			children = (
+				D4B8D03B211272E300329A79 /* QRCode */,
 				8A335A1F211257AF006517FC /* LoginSplash */,
 				8A9BDB4C21122607001070F5 /* AppDelegate.swift */,
 				8A9BDB4E21122607001070F5 /* ViewController.swift */,
@@ -113,13 +114,20 @@
 				8A9BDB5521122607001070F5 /* LaunchScreen.storyboard */,
 				7062B55D21123C7E009F3E26 /* font */,
 				8A9BDB5821122607001070F5 /* Info.plist */,
-				D4EE396F21122BF200AF8D73 /* QRCodeReaderViewController.swift */,
 				D4EE397121122C2700AF8D73 /* BalanceViewController.swift */,
 				D4EE397321122C4900AF8D73 /* MainViewController.swift */,
-				7062B60E211256DF009F3E26 /* QRReader.storyboard */,
-				7062B6102112572E009F3E26 /* QRReaderViewController.swift */,
 			);
 			path = nkoodi;
+			sourceTree = "<group>";
+		};
+		D4B8D03B211272E300329A79 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				D4EE396F21122BF200AF8D73 /* QRCodeReaderViewController.swift */,
+				D4B8D038211272DE00329A79 /* QRReader.storyboard */,
+				D4B8D037211272DE00329A79 /* QRReaderViewController.swift */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		E8C3D3F36B6FA275CFFF8AC4 /* Pods */ = {
@@ -195,8 +203,8 @@
 				7062B55F21123C9E009F3E26 /* Acens.ttf in Resources */,
 				8A9BDB5721122607001070F5 /* LaunchScreen.storyboard in Resources */,
 				8A335A21211257E1006517FC /* LoginSplashView.storyboard in Resources */,
-				7062B60F211256DF009F3E26 /* QRReader.storyboard in Resources */,
 				8A9BDB5F2112271D001070F5 /* GoogleService-Info.plist in Resources */,
+				D4B8D03A211272DE00329A79 /* QRReader.storyboard in Resources */,
 				8A9BDB5421122607001070F5 /* Assets.xcassets in Resources */,
 				8A9BDB5221122607001070F5 /* Main.storyboard in Resources */,
 			);
@@ -265,10 +273,9 @@
 				D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */,
 				D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */,
 				8A9BDB4F21122607001070F5 /* ViewController.swift in Sources */,
-				7062B6112112572E009F3E26 /* QRReaderViewController.swift in Sources */,
 				8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */,
 				D4EE397221122C2700AF8D73 /* BalanceViewController.swift in Sources */,
-				D4B8D0362112559600329A79 /* SplashViewController.swift in Sources */,
+				D4B8D039211272DE00329A79 /* QRReaderViewController.swift in Sources */,
 				D4EE397421122C4900AF8D73 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

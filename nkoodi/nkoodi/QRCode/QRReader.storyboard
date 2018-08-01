@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reader View Controller-->
+        <scene sceneID="EUw-cQ-cEf">
+            <objects>
+                <viewController storyboardIdentifier="QRReaderViewController" id="EJX-69-tqO" customClass="QRReaderViewController" customModule="nkoodi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZmB-RD-x24">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="51" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9L-Ql-cbk">
+                                <rect key="frame" x="229" y="246" width="54" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="PBu-zQ-dWB"/>
+                                </constraints>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="camerButtonTapped:" destination="EJX-69-tqO" eventType="touchUpInside" id="tQe-LT-ZmB"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8uB-Gt-tMs">
+                                <rect key="frame" x="20" y="246" width="189" height="30"/>
+                                <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XI2-Nm-Ixm">
+                                <rect key="frame" x="20" y="306" width="189" height="30"/>
+                                <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqL-h6-QkT">
+                                <rect key="frame" x="293" y="246" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="Kha-IA-SMr"/>
+                                </constraints>
+                                <state key="normal" title="Contacts">
+                                    <color key="titleColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="contactsButtonTapped:" destination="EJX-69-tqO" eventType="touchUpInside" id="Mhm-MS-ODU"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="133" placeholderIntrinsicHeight="105" translatesAutoresizingMaskIntoConstraints="NO" id="c64-rb-RU5">
+                                <rect key="frame" x="121" y="40" width="133" height="105"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user for transfer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zay-xW-Jei">
+                                <rect key="frame" x="20" y="175" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="57" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQq-ZF-Y6p">
+                                <rect key="frame" x="159" y="466" width="57" height="30"/>
+                                <state key="normal" title="Transfer">
+                                    <color key="titleColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="transferButtonTapped:" destination="EJX-69-tqO" eventType="touchUpInside" id="X2S-gD-cXj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xqL-h6-QkT" firstAttribute="top" secondItem="8uB-Gt-tMs" secondAttribute="top" id="76E-WZ-O7q"/>
+                            <constraint firstItem="c64-rb-RU5" firstAttribute="top" secondItem="ufU-8C-59B" secondAttribute="top" constant="20" id="8On-TN-xSm"/>
+                            <constraint firstItem="w9L-Ql-cbk" firstAttribute="leading" secondItem="XI2-Nm-Ixm" secondAttribute="trailing" constant="20" id="FFn-Ce-A6h"/>
+                            <constraint firstItem="ufU-8C-59B" firstAttribute="trailing" secondItem="Zay-xW-Jei" secondAttribute="trailing" constant="20" id="JO2-sV-5f4"/>
+                            <constraint firstItem="w9L-Ql-cbk" firstAttribute="leading" secondItem="8uB-Gt-tMs" secondAttribute="trailing" constant="20" id="JlZ-En-NAB"/>
+                            <constraint firstItem="8uB-Gt-tMs" firstAttribute="leading" secondItem="ufU-8C-59B" secondAttribute="leading" constant="20" id="Mxf-Fc-Bx7"/>
+                            <constraint firstItem="Zay-xW-Jei" firstAttribute="top" secondItem="c64-rb-RU5" secondAttribute="bottom" constant="30" id="Nfw-7Z-hAq"/>
+                            <constraint firstItem="HQq-ZF-Y6p" firstAttribute="top" secondItem="XI2-Nm-Ixm" secondAttribute="bottom" constant="130" id="OAg-xp-Tj9"/>
+                            <constraint firstItem="xqL-h6-QkT" firstAttribute="leading" secondItem="w9L-Ql-cbk" secondAttribute="trailing" constant="10" id="Whr-lA-lUo"/>
+                            <constraint firstItem="XI2-Nm-Ixm" firstAttribute="leading" secondItem="8uB-Gt-tMs" secondAttribute="leading" id="aYM-Kn-NUw"/>
+                            <constraint firstItem="w9L-Ql-cbk" firstAttribute="top" secondItem="8uB-Gt-tMs" secondAttribute="top" id="d1h-rw-gLj"/>
+                            <constraint firstItem="XI2-Nm-Ixm" firstAttribute="top" secondItem="8uB-Gt-tMs" secondAttribute="bottom" constant="30" id="iIp-Su-Klk"/>
+                            <constraint firstItem="c64-rb-RU5" firstAttribute="centerX" secondItem="ZmB-RD-x24" secondAttribute="centerX" id="jZm-uj-llK"/>
+                            <constraint firstItem="Zay-xW-Jei" firstAttribute="leading" secondItem="ufU-8C-59B" secondAttribute="leading" constant="20" id="koH-aW-yhM"/>
+                            <constraint firstItem="ufU-8C-59B" firstAttribute="trailing" secondItem="xqL-h6-QkT" secondAttribute="trailing" constant="20" id="nAQ-T1-P7Z"/>
+                            <constraint firstItem="HQq-ZF-Y6p" firstAttribute="centerX" secondItem="ZmB-RD-x24" secondAttribute="centerX" id="sHV-ZW-Ivy"/>
+                            <constraint firstItem="8uB-Gt-tMs" firstAttribute="top" secondItem="Zay-xW-Jei" secondAttribute="bottom" constant="50" id="xge-H7-hOR"/>
+                            <constraint firstItem="ufU-8C-59B" firstAttribute="bottom" secondItem="HQq-ZF-Y6p" secondAttribute="bottom" constant="171" id="yv0-gg-xyp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ufU-8C-59B"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="XI2-Nm-Ixm" id="YrD-Xr-xtT"/>
+                        <outlet property="logoImageView" destination="c64-rb-RU5" id="aDj-gB-DTf"/>
+                        <outlet property="qrCodeTextField" destination="8uB-Gt-tMs" id="BqZ-9y-Bjj"/>
+                        <outlet property="transferContactNameLabel" destination="Zay-xW-Jei" id="QjW-SC-7RZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BgJ-ga-L7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-748" y="-78.710644677661179"/>
+        </scene>
+    </scenes>
+</document>
