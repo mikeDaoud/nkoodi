@@ -18,13 +18,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let vc1 = MainViewController.create()
-        let vc2 = UIViewController()
-        let vc3 = UIViewController()
+        let vc2 = BalanceViewController.create()
+        let vc3 = QRReaderViewController.create()
         let vc4 = UIViewController()
         let vc5 = UIViewController()
-        vc1.view.backgroundColor = UIColor(hex: 0x00c6c35)
-        vc2.view.backgroundColor = UIColor(hex: 0x00c6c70)
-        vc3.view.backgroundColor = UIColor(hex: 0x00c6c90)
         vc4.view.backgroundColor = UIColor(hex: 0x00c6c80)
         vc5.view.backgroundColor = UIColor(hex: 0x00c6c10)
         
