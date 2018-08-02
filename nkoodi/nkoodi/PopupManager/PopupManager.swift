@@ -14,9 +14,10 @@ class PopupManager{
     static var window: UIWindow?
     
     static func showPopup(vc: UIViewController){
-        window = UIWindow()
-        window?.rootViewController = vc
-        window?.makeKeyAndVisible()
+        let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+        alertWindow.rootViewController = UIViewController()
+        alertWindow.makeKeyAndVisible()
+        alertWindow.rootViewController?.present(vc, animated: true, completion: nil)
     }
     
     static func dismissPopup(){

@@ -42,6 +42,7 @@ class QRReaderViewController: UIViewController {
     }
     
     @IBAction func contactsButtonTapped(_ sender: Any) {
+
     }
     
     @IBAction func transferButtonTapped(_ sender: Any) {
