@@ -49,7 +49,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KB-9h-fPf" userLabel="instruction">
-                                <rect key="frame" x="35" y="434" width="305" height="40.5"/>
+                                <rect key="frame" x="35" y="452" width="305" height="40.5"/>
                                 <string key="text">You can Send your code to anyone who uses the application so that they can transfer money to you
 And you can also let them scan your QR code.</string>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
@@ -57,16 +57,16 @@ And you can also let them scan your QR code.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUF-Ip-gsn">
-                                <rect key="frame" x="35" y="55" width="305" height="20"/>
+                                <rect key="frame" x="35" y="83" width="305" height="10"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsP-Xd-tEf" userLabel="NameLabel">
-                                        <rect key="frame" x="153" y="10" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="153" y="0.0" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8Y-ME-9Rv" userLabel="country">
-                                        <rect key="frame" x="153.5" y="10" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="153.5" y="0.0" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                         <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
@@ -75,14 +75,14 @@ And you can also let them scan your QR code.</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="lsP-Xd-tEf" firstAttribute="centerX" secondItem="HUF-Ip-gsn" secondAttribute="centerX" id="Ba1-4F-Bsq"/>
-                                    <constraint firstItem="lsP-Xd-tEf" firstAttribute="top" secondItem="HUF-Ip-gsn" secondAttribute="top" constant="10" id="Ck9-2j-ZK3"/>
+                                    <constraint firstItem="lsP-Xd-tEf" firstAttribute="top" secondItem="HUF-Ip-gsn" secondAttribute="top" id="Ck9-2j-ZK3"/>
                                     <constraint firstItem="H8Y-ME-9Rv" firstAttribute="centerX" secondItem="lsP-Xd-tEf" secondAttribute="centerX" id="D6S-ez-exq"/>
                                     <constraint firstItem="H8Y-ME-9Rv" firstAttribute="top" secondItem="lsP-Xd-tEf" secondAttribute="bottom" id="VGi-Yb-3VA"/>
                                     <constraint firstAttribute="bottom" secondItem="H8Y-ME-9Rv" secondAttribute="bottom" constant="10" id="fbJ-Yf-HGT"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkw-mt-zQw">
-                                <rect key="frame" x="35" y="97" width="305" height="287"/>
+                                <rect key="frame" x="35" y="115" width="305" height="287"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lY4-6O-7hQ">
                                         <rect key="frame" x="35" y="30" width="235" height="235"/>
@@ -106,17 +106,26 @@ And you can also let them scan your QR code.</string>
                                     <constraint firstAttribute="bottom" secondItem="pcs-0S-WGR" secondAttribute="bottom" constant="10" id="ysp-Hc-dsc"/>
                                 </constraints>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="FWd-Vd-NIb">
+                                <rect key="frame" x="156" y="20" width="63" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FWd-Vd-NIb" secondAttribute="height" multiplier="1:1" id="lC4-aV-pax"/>
+                                    <constraint firstAttribute="width" constant="63" id="yGj-nM-Ta3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="HUF-Ip-gsn" firstAttribute="top" secondItem="FWd-Vd-NIb" secondAttribute="bottom" id="3hZ-R7-rVw"/>
                             <constraint firstItem="HUF-Ip-gsn" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="Dko-yG-XPF"/>
+                            <constraint firstItem="FWd-Vd-NIb" firstAttribute="top" secondItem="ZWp-pw-D2j" secondAttribute="top" id="G9l-xW-tcb"/>
                             <constraint firstItem="4KB-9h-fPf" firstAttribute="top" secondItem="hkw-mt-zQw" secondAttribute="bottom" constant="50" id="N71-OH-iJ4"/>
                             <constraint firstItem="hkw-mt-zQw" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="QqW-QR-2sm"/>
                             <constraint firstItem="HUF-Ip-gsn" firstAttribute="leading" secondItem="ZWp-pw-D2j" secondAttribute="leading" constant="35" id="Y6g-y9-if7"/>
                             <constraint firstItem="4KB-9h-fPf" firstAttribute="leading" secondItem="hkw-mt-zQw" secondAttribute="leading" id="YmG-8h-5c2"/>
                             <constraint firstItem="hkw-mt-zQw" firstAttribute="top" secondItem="HUF-Ip-gsn" secondAttribute="bottom" constant="22" id="dML-qh-tXK"/>
-                            <constraint firstItem="HUF-Ip-gsn" firstAttribute="top" secondItem="ZWp-pw-D2j" secondAttribute="top" constant="35" id="gBF-3m-Plu"/>
                             <constraint firstItem="hkw-mt-zQw" firstAttribute="leading" secondItem="HUF-Ip-gsn" secondAttribute="leading" id="lCn-ef-rRv"/>
+                            <constraint firstItem="FWd-Vd-NIb" firstAttribute="centerX" secondItem="Rjo-ZW-hs2" secondAttribute="centerX" id="mFd-1Y-um7"/>
                             <constraint firstItem="4KB-9h-fPf" firstAttribute="centerX" secondItem="hkw-mt-zQw" secondAttribute="centerX" id="qI3-O8-Dd0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZWp-pw-D2j"/>
@@ -300,4 +309,7 @@ And you can also let them scan your QR code.</string>
             <point key="canvasLocation" x="2076" y="98"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="512" height="512"/>
+    </resources>
 </document>
