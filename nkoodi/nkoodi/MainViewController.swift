@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUpUserData()
     }
     
@@ -39,8 +40,8 @@ class MainViewController: UIViewController {
                     self.qrCodeImageView.image = {
                         var qrCode = QRCode(qrCode)!
                         qrCode.size = self.qrCodeImageView.bounds.size
-                        qrCode.color = CIColor(rgba: "16a085")
-                        qrCode.backgroundColor = CIColor(rgba: "000")
+                        qrCode.color = CIColor(rgba: "fff")
+                        qrCode.backgroundColor = CIColor(rgba: "006c35")
                         return qrCode.image
                     }()
                 }
