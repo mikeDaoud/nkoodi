@@ -114,8 +114,8 @@
                                         <fontDescription key="fontDescription" name="Acens" family="Acens" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsc-1a-8XZ">
-                                        <rect key="frame" x="227" y="0.0" width="88" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsc-1a-8XZ">
+                                        <rect key="frame" x="227" y="0.0" width="73" height="50"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -129,7 +129,7 @@
                                     <constraint firstAttribute="bottom" secondItem="ILG-Uw-WNh" secondAttribute="bottom" id="VZ7-13-nr7"/>
                                     <constraint firstItem="jsc-1a-8XZ" firstAttribute="leading" secondItem="ILG-Uw-WNh" secondAttribute="trailing" constant="5" id="XES-q5-Lc5"/>
                                     <constraint firstItem="jsc-1a-8XZ" firstAttribute="top" secondItem="7As-M0-deN" secondAttribute="top" id="Z6k-k3-n3N"/>
-                                    <constraint firstAttribute="trailing" secondItem="jsc-1a-8XZ" secondAttribute="trailing" id="eiW-i2-Fyu"/>
+                                    <constraint firstAttribute="trailing" secondItem="jsc-1a-8XZ" secondAttribute="trailing" constant="15" id="eiW-i2-Fyu"/>
                                 </constraints>
                             </view>
                         </subviews>
