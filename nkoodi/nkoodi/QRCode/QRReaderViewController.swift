@@ -35,7 +35,7 @@ class QRReaderViewController: BaseViewController {
         ////
         qrCodeTextField.borderStyle = .none
         let option1 = NSMutableAttributedString(string: "QR code")
-        option1.addAttribute(NSForegroundColorAttributeName, value: UIColor.lightGray, range: NSRange(location: 0, length: option1.length))
+        option1.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: option1.length))
         option1.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Arial", size: 16), range: NSRange(location: 0, length: option1.length))
         qrCodeTextField.attributedPlaceholder = option1
         container1.layer.cornerRadius = 22
@@ -44,7 +44,7 @@ class QRReaderViewController: BaseViewController {
         /////
         amountTextField.borderStyle = .none
         let option2 = NSMutableAttributedString(string: "Amount")
-        option2.addAttribute(NSForegroundColorAttributeName, value: UIColor.lightGray, range: NSRange(location: 0, length: option2.length))
+        option2.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSRange(location: 0, length: option2.length))
         option2.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Arial", size: 16), range: NSRange(location: 0, length: option2.length))
         amountTextField.attributedPlaceholder = option2
         conatiner2.layer.cornerRadius = 22

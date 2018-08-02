@@ -17,7 +17,11 @@ class BalanceViewController: BaseViewController {
     @IBOutlet weak var historyTable: UITableView!
     
     //vars
-    var transactionsHistory: (ascTransactionsHistory: TransactionsHistory, desTransactionsHistory: TransactionsHistory)?
+    var transactionsHistory: (ascTransactionsHistory: TransactionsHistory, desTransactionsHistory: TransactionsHistory)? {
+        didSet {
+            lblBalance.text = "\(transactionsHistory?.ascTransactionsHistory.currentBalance ?? 0) ASR"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
