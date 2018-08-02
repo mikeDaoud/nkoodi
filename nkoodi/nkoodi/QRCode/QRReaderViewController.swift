@@ -24,6 +24,8 @@ class QRReaderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        qrCodeTextField.tintColor = UIColor.white
+        amountTextField.tintColor = UIColor.white
         qrCodeTextField.delegate = self
         qrCodeTextFieldHasChanged = { text in
             self.transferContactNameLabel.text = "user name: " + text
