@@ -47,10 +47,10 @@ class DataStore {
     func getTransactionsHistory(completion: @escaping ((ascTransactionsHistory: TransactionsHistory, desTransactionsHistory: TransactionsHistory)) -> ()){
         //To be implemented
         let userId = Auth.auth().currentUser!.uid
-        ref.child("users").child(userId).child("balance_history").observeSingleEvent(of: .value, with: {snapshot in
-            if let balanceHistory = snapshot.value as? NSDictionary{
+        ref.child("users").child(userId).observeSingleEvent(of: .value, with: {snapshot in
+            if let user = snapshot.value as? NSDictionary, let balance = user["current_balance"] as? Double, let balanceHistory = user["balance_history"] as? NSDictionary{
                 let balanceHistoryArr = balanceHistory.allValues
-                var transactionsHistory: TransactionsHistory = TransactionsHistory.init(transactions: [])
+                var transactionsHistory: TransactionsHistory = TransactionsHistory.init(currentBalance: 0, transactions: [])
                 for item in balanceHistoryArr {
                     if let item = item as? NSDictionary {
                         let transaction = Transaction(date: item["date"] as? Double ?? 0,
@@ -60,10 +60,10 @@ class DataStore {
                         transactionsHistory.transactions.append(transaction)
                     }
                 }
-                let ascHistory: TransactionsHistory = TransactionsHistory(transactions: transactionsHistory.transactions.sorted(by: { t1, t2 in
+                let ascHistory: TransactionsHistory = TransactionsHistory(currentBalance: balance, transactions: transactionsHistory.transactions.sorted(by: { t1, t2 in
                     return t1.date <= t2.date
                 }))
-                let desHistory: TransactionsHistory = TransactionsHistory(transactions: transactionsHistory.transactions.sorted(by: { t1, t2 in
+                let desHistory: TransactionsHistory = TransactionsHistory(currentBalance: balance, transactions: transactionsHistory.transactions.sorted(by: { t1, t2 in
                     return t1.date >= t2.date
                     }))
                 completion((ascHistory, desHistory))
