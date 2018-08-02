@@ -59,6 +59,10 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="133" placeholderIntrinsicHeight="105" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="c64-rb-RU5">
                                 <rect key="frame" x="121" y="40" width="133" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="3GH-9p-aQH"/>
+                                    <constraint firstAttribute="width" constant="133" id="ZHF-xq-Qwu"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user for transfer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zay-xW-Jei">
                                 <rect key="frame" x="20" y="175" width="335" height="18"/>
