@@ -43,8 +43,8 @@ class StoresViewController: BaseViewController {
         let store10 = Store(name: "LCWICII", address: "Jaddah")
         let stores2 = [store6, store7, store8, store9, store10]
         let category2 = Category(name: "Clothes", stores: stores2)
-        allStores.append(category1)
         allStores.append(category2)
+        departmentsSearchResults = allStores
     }
     private func setUpView() {
         searchController.searchResultsUpdater = self
@@ -79,7 +79,7 @@ class StoresViewController: BaseViewController {
     }
     
     static func create() -> StoresViewController {
-        return UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier:
+        return UIStoryboard.init(name: "Stores", bundle: Bundle.main).instantiateViewController(withIdentifier:
             StoresViewController.ID) as! StoresViewController
     }
 }
@@ -99,12 +99,17 @@ extension StoresViewController: UITableViewDelegate, UITableViewDataSource, UISe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StoreCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StoreCell", for: indexPath) as! StoreCell
+        cell.config(store: departmentsSearchResults[indexPath.section].stores[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return departmentsSearchResults[section].name
     }
     
 }

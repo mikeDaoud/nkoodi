@@ -61,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KB-9h-fPf" userLabel="instruction">
-                                <rect key="frame" x="35" y="452" width="305" height="40.5"/>
+                                <rect key="frame" x="35" y="556.5" width="305" height="40.5"/>
                                 <string key="text">You can Send your code to anyone who uses the application so that they can transfer money to you
 And you can also let them scan your QR code.</string>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
@@ -96,7 +96,7 @@ And you can also let them scan your QR code.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkw-mt-zQw">
                                 <rect key="frame" x="35" y="115" width="305" height="287"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lY4-6O-7hQ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_colored" translatesAutoresizingMaskIntoConstraints="NO" id="lY4-6O-7hQ">
                                         <rect key="frame" x="35" y="30" width="235" height="235"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="lY4-6O-7hQ" secondAttribute="height" id="Yed-5A-cgt"/>
@@ -128,10 +128,10 @@ And you can also let them scan your QR code.</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ZWp-pw-D2j" firstAttribute="bottom" secondItem="4KB-9h-fPf" secondAttribute="bottom" constant="70" id="25g-gu-ypN"/>
                             <constraint firstItem="HUF-Ip-gsn" firstAttribute="top" secondItem="FWd-Vd-NIb" secondAttribute="bottom" id="3hZ-R7-rVw"/>
                             <constraint firstItem="HUF-Ip-gsn" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="Dko-yG-XPF"/>
                             <constraint firstItem="FWd-Vd-NIb" firstAttribute="top" secondItem="ZWp-pw-D2j" secondAttribute="top" id="G9l-xW-tcb"/>
-                            <constraint firstItem="4KB-9h-fPf" firstAttribute="top" secondItem="hkw-mt-zQw" secondAttribute="bottom" constant="50" id="N71-OH-iJ4"/>
                             <constraint firstItem="hkw-mt-zQw" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="QqW-QR-2sm"/>
                             <constraint firstItem="HUF-Ip-gsn" firstAttribute="leading" secondItem="ZWp-pw-D2j" secondAttribute="leading" constant="35" id="Y6g-y9-if7"/>
                             <constraint firstItem="4KB-9h-fPf" firstAttribute="leading" secondItem="hkw-mt-zQw" secondAttribute="leading" id="YmG-8h-5c2"/>
@@ -218,7 +218,7 @@ And you can also let them scan your QR code.</string>
                                 <rect key="frame" x="0.0" y="20" width="375" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="439.5 SAR" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-gh-bUh" userLabel="NameLabel">
-                                        <rect key="frame" x="112" y="14" width="152.5" height="42.5"/>
+                                        <rect key="frame" x="111.5" y="14" width="152.5" height="42.5"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -324,5 +324,6 @@ And you can also let them scan your QR code.</string>
     </scenes>
     <resources>
         <image name="logo" width="512" height="512"/>
+        <image name="logo_colored" width="512" height="512"/>
     </resources>
 </document>

@@ -20,15 +20,19 @@
 		8A335A2A21126A51006517FC /* CodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A2921126A51006517FC /* CodeGenerator.swift */; };
 		8A335A2D21128EDD006517FC /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A2C21128EDD006517FC /* AppContainerViewController.swift */; };
 		8A335A3021129A10006517FC /* PopupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A2F21129A10006517FC /* PopupManager.swift */; };
+		8A5A9DE3211396AF000B59FA /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A9DE2211396AF000B59FA /* MoreViewController.swift */; };
+		8A5A9DE5211396D8000B59FA /* MoreView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5A9DE4211396D8000B59FA /* MoreView.storyboard */; };
 		8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9BDB4C21122607001070F5 /* AppDelegate.swift */; };
 		8A9BDB4F21122607001070F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9BDB4E21122607001070F5 /* ViewController.swift */; };
 		8A9BDB5221122607001070F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5021122607001070F5 /* Main.storyboard */; };
 		8A9BDB5421122607001070F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5321122607001070F5 /* Assets.xcassets */; };
 		8A9BDB5721122607001070F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5521122607001070F5 /* LaunchScreen.storyboard */; };
 		8A9BDB5F2112271D001070F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5E2112271D001070F5 /* GoogleService-Info.plist */; };
-		D40F3CF721138D64006FBE11 /* Stores.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40F3CF621138D63006FBE11 /* Stores.xib */; };
 		D40F3CF921138D7A006FBE11 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F3CF821138D7A006FBE11 /* StoresViewController.swift */; };
 		D40F3CFB21138E90006FBE11 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F3CFA21138E90006FBE11 /* Category.swift */; };
+		D40F3CFD21139428006FBE11 /* Stores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40F3CFC21139428006FBE11 /* Stores.storyboard */; };
+		D40F3CFF21139631006FBE11 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F3CFE21139631006FBE11 /* StoreCell.swift */; };
+		D40F3D0321139E7F006FBE11 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F3D0221139E7F006FBE11 /* SettingCell.swift */; };
 		D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D0332112504F00329A79 /* LoginSplashViewController.swift */; };
 		D4B8D039211272DE00329A79 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D037211272DE00329A79 /* QRReaderViewController.swift */; };
 		D4B8D03A211272DE00329A79 /* QRReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B8D038211272DE00329A79 /* QRReader.storyboard */; };
@@ -52,6 +56,8 @@
 		8A335A2921126A51006517FC /* CodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGenerator.swift; sourceTree = "<group>"; };
 		8A335A2C21128EDD006517FC /* AppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
 		8A335A2F21129A10006517FC /* PopupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupManager.swift; sourceTree = "<group>"; };
+		8A5A9DE2211396AF000B59FA /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		8A5A9DE4211396D8000B59FA /* MoreView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreView.storyboard; sourceTree = "<group>"; };
 		8A9BDB4921122607001070F5 /* nkoodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nkoodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9BDB4C21122607001070F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A9BDB4E21122607001070F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,9 +67,11 @@
 		8A9BDB5821122607001070F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A9BDB5E2112271D001070F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99108625AC17317141A7F44A /* Pods-nkoodi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nkoodi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nkoodi/Pods-nkoodi.debug.xcconfig"; sourceTree = "<group>"; };
-		D40F3CF621138D63006FBE11 /* Stores.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Stores.xib; sourceTree = "<group>"; };
 		D40F3CF821138D7A006FBE11 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
 		D40F3CFA21138E90006FBE11 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D40F3CFC21139428006FBE11 /* Stores.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stores.storyboard; sourceTree = "<group>"; };
+		D40F3CFE21139631006FBE11 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		D40F3D0221139E7F006FBE11 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		D4B8D0332112504F00329A79 /* LoginSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSplashViewController.swift; sourceTree = "<group>"; };
 		D4B8D037211272DE00329A79 /* QRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		D4B8D038211272DE00329A79 /* QRReader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRReader.storyboard; sourceTree = "<group>"; };
@@ -99,6 +107,8 @@
 			children = (
 				7008144021135C4F007C96A7 /* TransactionHistroyCell.xib */,
 				7008144221135DD7007C96A7 /* TransactionHistroyCell.swift */,
+				D40F3CFE21139631006FBE11 /* StoreCell.swift */,
+				D40F3D0221139E7F006FBE11 /* SettingCell.swift */,
 			);
 			path = customCells;
 			sourceTree = "<group>";
@@ -157,6 +167,15 @@
 			path = PopupManager;
 			sourceTree = "<group>";
 		};
+		8A5A9DE12113969B000B59FA /* MoreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8A5A9DE2211396AF000B59FA /* MoreViewController.swift */,
+				8A5A9DE4211396D8000B59FA /* MoreView.storyboard */,
+			);
+			path = MoreViewController;
+			sourceTree = "<group>";
+		};
 		8A9BDB4021122607001070F5 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +198,7 @@
 		8A9BDB4B21122607001070F5 /* nkoodi */ = {
 			isa = PBXGroup;
 			children = (
+				8A5A9DE12113969B000B59FA /* MoreViewController */,
 				D40F3CF521138D43006FBE11 /* SettingStore */,
 				8A14BD9521135FC3005DFD6F /* extensions */,
 				7008143F21135C30007C96A7 /* customCells */,
@@ -204,8 +224,8 @@
 		D40F3CF521138D43006FBE11 /* SettingStore */ = {
 			isa = PBXGroup;
 			children = (
-				D40F3CF621138D63006FBE11 /* Stores.xib */,
 				D40F3CF821138D7A006FBE11 /* StoresViewController.swift */,
+				D40F3CFC21139428006FBE11 /* Stores.storyboard */,
 			);
 			path = SettingStore;
 			sourceTree = "<group>";
@@ -290,12 +310,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A5A9DE5211396D8000B59FA /* MoreView.storyboard in Resources */,
 				7062B55F21123C9E009F3E26 /* Acens.ttf in Resources */,
 				8A9BDB5721122607001070F5 /* LaunchScreen.storyboard in Resources */,
 				8A335A21211257E1006517FC /* LoginSplashView.storyboard in Resources */,
 				7008144121135C4F007C96A7 /* TransactionHistroyCell.xib in Resources */,
 				8A9BDB5F2112271D001070F5 /* GoogleService-Info.plist in Resources */,
-				D40F3CF721138D64006FBE11 /* Stores.xib in Resources */,
+				D40F3CFD21139428006FBE11 /* Stores.storyboard in Resources */,
 				D4B8D03A211272DE00329A79 /* QRReader.storyboard in Resources */,
 				8A9BDB5421122607001070F5 /* Assets.xcassets in Resources */,
 				8A9BDB5221122607001070F5 /* Main.storyboard in Resources */,
@@ -370,13 +391,16 @@
 				8A335A3021129A10006517FC /* PopupManager.swift in Sources */,
 				D40F3CFB21138E90006FBE11 /* Category.swift in Sources */,
 				8A14BD9721135FD7005DFD6F /* UIView+shadow.swift in Sources */,
+				D40F3D0321139E7F006FBE11 /* SettingCell.swift in Sources */,
 				D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */,
+				8A5A9DE3211396AF000B59FA /* MoreViewController.swift in Sources */,
 				8A335A2A21126A51006517FC /* CodeGenerator.swift in Sources */,
 				D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */,
 				8A9BDB4F21122607001070F5 /* ViewController.swift in Sources */,
 				D4B8D0442113772F00329A79 /* BaseViewController.swift in Sources */,
 				D40F3CF921138D7A006FBE11 /* StoresViewController.swift in Sources */,
 				8A335A252112617C006517FC /* User.swift in Sources */,
+				D40F3CFF21139631006FBE11 /* StoreCell.swift in Sources */,
 				7008144321135DD7007C96A7 /* TransactionHistroyCell.swift in Sources */,
 				8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */,
 				D4EE397221122C2700AF8D73 /* BalanceViewController.swift in Sources */,
