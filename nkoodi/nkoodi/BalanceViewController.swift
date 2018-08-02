@@ -71,26 +71,7 @@ class BalanceViewController: BaseViewController {
     
     func reloadView() {
         historyTable.reloadData()
-        
-//        let lineChart = LineChartDataSet(values: chartDataEntryArr, label: nil)
-//        lineChart.colors = [NSUIColor.clear]
-//        lineChart.fillColor = UIColor.red
-//        lineChart.mode = .cubicBezier
-//        lineChart.drawCirclesEnabled = false
-//        lineChart.drawFilledEnabled = true
-//        lineChart.lineCapType = .round
-//        lineChart.formLineWidth = 0
-//        lineChart.drawValuesEnabled = true
-//        let data = LineChartData(dataSet: lineChart)
-//        chartView.data = data
-//        chartView.lineData?.notifyDataChanged()
-//        chartView.notifyDataSetChanged()
-//        chartView.chartDescription?.text = nil
-        
-        
         setupChart()
-        
-        
     }
     
     func setupChart() {
@@ -100,7 +81,7 @@ class BalanceViewController: BaseViewController {
        
         let lineChart = LineChartDataSet(values: chartDataEntryArr, label: nil)
         lineChart.colors = [NSUIColor.clear]
-        lineChart.fillColor = UIColor.red
+        lineChart.fillColor = UIColor.yellow
         lineChart.mode = .cubicBezier
         lineChart.drawCirclesEnabled = false
         lineChart.drawFilledEnabled = true
