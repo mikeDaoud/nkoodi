@@ -92,7 +92,7 @@ class QRReaderViewController: UIViewController {
                 switch action.style{
                 case .default:
                     print("default")
-                    DataStore.shared.getUserNameWithQR(self.qrCodeTextField.text!, completion: { (user) in
+                    DataStore.shared.getUserWithQR(self.qrCodeTextField.text!, completion: { (user) in
                         if let user = user{
                             DataStore.shared.transfer(amount: Double(self.amountTextField.text!)!, to: user, completion: { (_) in
                                 
