@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class QRCodeReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class QRCodeReaderViewController: BaseViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var viewPreview: UIView!
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!

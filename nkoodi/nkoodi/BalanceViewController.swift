@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class BalanceViewController: UIViewController {
+class BalanceViewController: BaseViewController {
     static let ID = "BalanceViewController"
     
     @IBOutlet weak var chartView: LineChartView!

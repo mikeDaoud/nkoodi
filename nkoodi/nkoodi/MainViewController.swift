@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import Pastel
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
     static let ID = "MainViewController"
     @IBOutlet weak var qrCodeImageView: UIImageView!
     @IBOutlet weak var lblName: UILabel!
@@ -28,20 +28,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         setUpUserData()
-        let pastelView = PastelView(frame: view.bounds)
         
-        // Custom Direction
-        pastelView.startPastelPoint = .bottomLeft
-        pastelView.endPastelPoint = .topRight
-        
-        // Custom Duration
-        pastelView.animationDuration = 3.0
-        
-        // Custom Color
-        pastelView.setColors([UIColor(hexString: "#2af598"), UIColor(hexString: "#009efd")])
-        
-        pastelView.startAnimation()
-        view.insertSubview(pastelView, at: 0)
         
     }
     

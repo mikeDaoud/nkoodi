@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class QRReaderViewController: UIViewController {
+class QRReaderViewController: BaseViewController {
     
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var transferContactNameLabel: UILabel!

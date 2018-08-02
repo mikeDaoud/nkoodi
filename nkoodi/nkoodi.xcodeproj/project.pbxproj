@@ -29,6 +29,7 @@
 		D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D0332112504F00329A79 /* LoginSplashViewController.swift */; };
 		D4B8D039211272DE00329A79 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D037211272DE00329A79 /* QRReaderViewController.swift */; };
 		D4B8D03A211272DE00329A79 /* QRReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B8D038211272DE00329A79 /* QRReader.storyboard */; };
+		D4B8D0442113772F00329A79 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D0432113772F00329A79 /* BaseViewController.swift */; };
 		D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE396F21122BF200AF8D73 /* QRCodeReaderViewController.swift */; };
 		D4EE397221122C2700AF8D73 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE397121122C2700AF8D73 /* BalanceViewController.swift */; };
 		D4EE397421122C4900AF8D73 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE397321122C4900AF8D73 /* MainViewController.swift */; };
@@ -60,6 +61,7 @@
 		D4B8D0332112504F00329A79 /* LoginSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSplashViewController.swift; sourceTree = "<group>"; };
 		D4B8D037211272DE00329A79 /* QRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		D4B8D038211272DE00329A79 /* QRReader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRReader.storyboard; sourceTree = "<group>"; };
+		D4B8D0432113772F00329A79 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D4EE396F21122BF200AF8D73 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
 		D4EE397121122C2700AF8D73 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		D4EE397321122C4900AF8D73 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				8A9BDB5821122607001070F5 /* Info.plist */,
 				D4EE397121122C2700AF8D73 /* BalanceViewController.swift */,
 				D4EE397321122C4900AF8D73 /* MainViewController.swift */,
+				D4B8D0432113772F00329A79 /* BaseViewController.swift */,
 			);
 			path = nkoodi;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				8A335A2A21126A51006517FC /* CodeGenerator.swift in Sources */,
 				D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */,
 				8A9BDB4F21122607001070F5 /* ViewController.swift in Sources */,
+				D4B8D0442113772F00329A79 /* BaseViewController.swift in Sources */,
 				8A335A252112617C006517FC /* User.swift in Sources */,
 				7008144321135DD7007C96A7 /* TransactionHistroyCell.swift in Sources */,
 				8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */,

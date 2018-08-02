@@ -210,7 +210,7 @@ And you can also let them scan your QR code.</string>
                                         <state key="normal" title="Add"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="NLB-61-Nxa" firstAttribute="centerY" secondItem="I6D-4L-faX" secondAttribute="centerY" id="1qD-zq-98w"/>
                                     <constraint firstAttribute="trailing" secondItem="NLB-61-Nxa" secondAttribute="trailing" constant="20" id="MHQ-vv-nw3"/>
@@ -228,7 +228,7 @@ And you can also let them scan your QR code.</string>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yjS-Ws-1IQ">
                                 <rect key="frame" x="0.0" y="420" width="375" height="247"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="Fy7-5h-5YF">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
@@ -265,6 +265,7 @@ And you can also let them scan your QR code.</string>
                                                 <constraint firstItem="yZb-OJ-Xi7" firstAttribute="top" secondItem="fpA-nf-0j4" secondAttribute="bottom" constant="5" id="yLb-Vx-8vV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
