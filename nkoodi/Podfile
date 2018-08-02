@@ -13,5 +13,19 @@ target 'nkoodi' do
   pod 'BATabBarController'
   pod 'Charts'
   pod 'IQKeyboardManagerSwift'
-
+  
 end
+
+post_install do |installer|
+    # Your list of targets here.
+    myTargets = ['Charts']
+    
+    installer.pods_project.targets.each do |target|
+        if myTargets.include? target.name
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '4.1'
+            end
+        end
+    end
+end
+
