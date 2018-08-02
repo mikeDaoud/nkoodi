@@ -79,7 +79,7 @@ class StoresViewController: BaseViewController {
     }
     
     static func create() -> StoresViewController {
-        return UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier:
+        return UIStoryboard.init(name: "Stores", bundle: Bundle.main).instantiateViewController(withIdentifier:
             StoresViewController.ID) as! StoresViewController
     }
 }
