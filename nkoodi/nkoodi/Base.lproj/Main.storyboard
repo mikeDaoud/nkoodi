@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sVU-wP-mvt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sVU-wP-mvt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -98,33 +98,28 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daQ-8L-CV7">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cU-Aw-gfv">
-                                        <rect key="frame" x="15" y="15" width="48" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Icm-O9-aqe"/>
-                                        </constraints>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancelButtonTapped:" destination="ou0-Sk-l8t" eventType="touchUpInside" id="DQJ-wC-ZLT"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7cU-Aw-gfv" secondAttribute="trailing" constant="20" symbolic="YES" id="IJe-Qb-Bp0"/>
-                                    <constraint firstItem="7cU-Aw-gfv" firstAttribute="leading" secondItem="daQ-8L-CV7" secondAttribute="leading" constant="15" id="fQf-BX-gJX"/>
-                                    <constraint firstItem="7cU-Aw-gfv" firstAttribute="top" secondItem="daQ-8L-CV7" secondAttribute="top" constant="15" id="hjS-xk-AtU"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cU-Aw-gfv">
+                                <rect key="frame" x="20" y="40" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Icm-O9-aqe"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="ou0-Sk-l8t" eventType="touchUpInside" id="DQJ-wC-ZLT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VWA-Ki-Vj4" firstAttribute="bottom" secondItem="daQ-8L-CV7" secondAttribute="bottom" id="9F2-eC-tE4"/>
                             <constraint firstItem="daQ-8L-CV7" firstAttribute="top" secondItem="VWA-Ki-Vj4" secondAttribute="top" id="R4P-tC-G1H"/>
                             <constraint firstItem="daQ-8L-CV7" firstAttribute="leading" secondItem="VWA-Ki-Vj4" secondAttribute="leading" id="VOb-11-gVj"/>
+                            <constraint firstItem="7cU-Aw-gfv" firstAttribute="top" secondItem="VWA-Ki-Vj4" secondAttribute="top" constant="20" id="dLI-S3-mdy"/>
+                            <constraint firstItem="7cU-Aw-gfv" firstAttribute="leading" secondItem="VWA-Ki-Vj4" secondAttribute="leading" constant="20" id="ht7-UM-rLc"/>
                             <constraint firstItem="daQ-8L-CV7" firstAttribute="top" secondItem="VWA-Ki-Vj4" secondAttribute="top" id="lXT-QJ-8uJ"/>
                             <constraint firstItem="daQ-8L-CV7" firstAttribute="top" secondItem="VWA-Ki-Vj4" secondAttribute="top" id="qJC-R4-I6B"/>
                             <constraint firstItem="VWA-Ki-Vj4" firstAttribute="trailing" secondItem="daQ-8L-CV7" secondAttribute="trailing" id="yPX-Iw-lYS"/>

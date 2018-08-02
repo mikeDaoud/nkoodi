@@ -12,5 +12,6 @@ target 'nkoodi' do
   pod 'QRCode'
   pod 'BATabBarController'
   pod 'Charts'
+  pod 'IQKeyboardManagerSwift'
 
 end
