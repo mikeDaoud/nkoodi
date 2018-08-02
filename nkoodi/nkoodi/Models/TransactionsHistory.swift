@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 struct TransactionsHistory {
-    var currentBalance: Double
     var transactions: [Transaction]
 }
 

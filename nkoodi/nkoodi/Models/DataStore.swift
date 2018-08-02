@@ -44,29 +44,34 @@ class DataStore {
         }
     }
     
-    func getTransactionsHistory(completion: @escaping ((ascTransactionsHistory: TransactionsHistory, desTransactionsHistory: TransactionsHistory)) -> ()){
+    func getTransactionsHistory(completion: @escaping  (Transaction) -> (),balanceCompletion: @escaping (Double) -> ()){
         //To be implemented
         let userId = Auth.auth().currentUser!.uid
-        ref.child("users").child(userId).observe(.childAdded, with: {snapshot in
-            if let user = snapshot.value as? NSDictionary, let balance = user["current_balance"] as? Double, let balanceHistory = user["balance_history"] as? NSDictionary{
-                let balanceHistoryArr = balanceHistory.allValues
-                var transactionsHistory: TransactionsHistory = TransactionsHistory.init(currentBalance: 0, transactions: [])
-                for item in balanceHistoryArr {
-                    if let item = item as? NSDictionary {
-                        let transaction = Transaction(date: item["date"] as? Double ?? 0,
-                                                      amountChanged: item["amount_changed"] as? Double ?? 0,
-                                                      operation: TransactionOperation(rawValue: item["operation"] as? String ?? "")  ?? .none,
-                                                      vendor: item["vendor"] as? String ?? "")
-                        transactionsHistory.transactions.append(transaction)
-                    }
-                }
-                let ascHistory: TransactionsHistory = TransactionsHistory(currentBalance: balance, transactions: transactionsHistory.transactions.sorted(by: { t1, t2 in
-                    return t1.date <= t2.date
-                }))
-                let desHistory: TransactionsHistory = TransactionsHistory(currentBalance: balance, transactions: transactionsHistory.transactions.sorted(by: { t1, t2 in
-                    return t1.date >= t2.date
-                    }))
-                completion((ascHistory, desHistory))
+        ref.child("users").child(userId).child("balance_history").observe(.childAdded, with: {snapshot in
+            if let balanceHistory = snapshot.value as? NSDictionary{
+//                let balanceHistoryArr = balanceHistory.allValues
+//                var transactionsHistory: TransactionsHistory = TransactionsHistory.init(transactions: [])
+//                for item in balanceHistoryArr {
+//                    if let item = item as? NSDictionary {
+                        let transaction = Transaction(date: balanceHistory["date"] as? Double ?? 0,
+                                                      amountChanged: balanceHistory["amount_changed"] as? Double ?? 0,
+                                                      operation: TransactionOperation(rawValue: balanceHistory["operation"] as? String ?? "")  ?? .none,
+                                                      vendor: balanceHistory["vendor"] as? String ?? "")
+//                        transactionsHistory.transactions.append(transaction)
+//                    }
+//                }
+//                let ascHistory: TransactionsHistory = TransactionsHistory(transactions: transactionsHistory.transactions.sorted(by: { t1, t2 in
+//                    return t1.date <= t2.date
+//                }))
+//                let desHistory: TransactionsHistory = TransactionsHistory(transactions: transactionsHistory.transactions.sorted(by: { t1, t2 in
+//                    return t1.date >= t2.date
+//                    }))
+                completion(transaction)
+            }
+        })
+        ref.child("users").child(userId).child("current_balance").observe(.value, with: {snapshot in
+            if let currentBalance = snapshot.value as? Double{
+               balanceCompletion(currentBalance)
             }
         })
     }
