@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6C3A82F1A2A8C6DB769CDB7F /* Pods_nkoodi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB365502B92D7A3116B595B /* Pods_nkoodi.framework */; };
 		7062B55F21123C9E009F3E26 /* Acens.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7062B55E21123C9D009F3E26 /* Acens.ttf */; };
+		8A14BD9721135FD7005DFD6F /* UIView+shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14BD9621135FD7005DFD6F /* UIView+shadow.swift */; };
+		8A14BD9921136B9B005DFD6F /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A14BD9821136B9B005DFD6F /* UIColor+hex.swift */; };
 		8A335A21211257E1006517FC /* LoginSplashView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A335A20211257E1006517FC /* LoginSplashView.storyboard */; };
 		8A335A2321126080006517FC /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A2221126080006517FC /* DataStore.swift */; };
 		8A335A252112617C006517FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A242112617C006517FC /* User.swift */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		3FB365502B92D7A3116B595B /* Pods_nkoodi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nkoodi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7062B55E21123C9D009F3E26 /* Acens.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Acens.ttf; sourceTree = "<group>"; };
+		8A14BD9621135FD7005DFD6F /* UIView+shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+shadow.swift"; sourceTree = "<group>"; };
+		8A14BD9821136B9B005DFD6F /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		8A335A20211257E1006517FC /* LoginSplashView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSplashView.storyboard; sourceTree = "<group>"; };
 		8A335A2221126080006517FC /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		8A335A242112617C006517FC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 				7062B55E21123C9D009F3E26 /* Acens.ttf */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		8A14BD9521135FC3005DFD6F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A14BD9621135FD7005DFD6F /* UIView+shadow.swift */,
+				8A14BD9821136B9B005DFD6F /* UIColor+hex.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		8A335A1F211257AF006517FC /* LoginSplash */ = {
@@ -144,6 +157,7 @@
 		8A9BDB4B21122607001070F5 /* nkoodi */ = {
 			isa = PBXGroup;
 			children = (
+				8A14BD9521135FC3005DFD6F /* extensions */,
 				8A335A2E211299FD006517FC /* PopupManager */,
 				8A335A2B21128EC4006517FC /* AppContainer */,
 				8A335A26211261B0006517FC /* Models */,
@@ -268,6 +282,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -280,6 +295,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -316,6 +332,7 @@
 			files = (
 				8A335A2321126080006517FC /* DataStore.swift in Sources */,
 				8A335A3021129A10006517FC /* PopupManager.swift in Sources */,
+				8A14BD9721135FD7005DFD6F /* UIView+shadow.swift in Sources */,
 				D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */,
 				8A335A2A21126A51006517FC /* CodeGenerator.swift in Sources */,
 				D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */,
@@ -325,6 +342,7 @@
 				D4EE397221122C2700AF8D73 /* BalanceViewController.swift in Sources */,
 				8A335A2D21128EDD006517FC /* AppContainerViewController.swift in Sources */,
 				D4B8D039211272DE00329A79 /* QRReaderViewController.swift in Sources */,
+				8A14BD9921136B9B005DFD6F /* UIColor+hex.swift in Sources */,
 				D4EE397421122C4900AF8D73 /* MainViewController.swift in Sources */,
 				8A335A28211261D1006517FC /* TransactionsHistory.swift in Sources */,
 			);

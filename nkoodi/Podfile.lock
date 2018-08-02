@@ -42,6 +42,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Pastel (0.4.0)
   - QRCode (2.0)
 
 DEPENDENCIES:
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - IQKeyboardManagerSwift
+  - Pastel
   - QRCode
 
 SPEC REPOS:
@@ -69,6 +71,7 @@ SPEC REPOS:
     - leveldb-library
     - Masonry
     - nanopb
+    - Pastel
     - QRCode
 
 SPEC CHECKSUMS:
@@ -86,8 +89,9 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Pastel: 7fa5e26123b3dbe11f7ed255654bf37100b199a5
   QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
 
-PODFILE CHECKSUM: f9c2b59578fe80221f3470ecc5231006cc0ee9bf
+PODFILE CHECKSUM: e0428e818f71187fd1882cffbfad27b6f672143a
 
 COCOAPODS: 1.5.3

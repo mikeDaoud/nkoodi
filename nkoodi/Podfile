@@ -13,6 +13,7 @@ target 'nkoodi' do
   pod 'BATabBarController'
   pod 'Charts'
   pod 'IQKeyboardManagerSwift'
+  pod 'Pastel'
   
 end
 

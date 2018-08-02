@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AppContainerViewController: UIViewController {
 
@@ -15,10 +16,18 @@ class AppContainerViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(operationDetected(_:)), name: NSNotification.Name(rawValue: "new_operation"), object: nil)
         // Do any additional setup after loading the view.
         
-        let vc = UIStoryboard(name: "LoginSplashView", bundle: nil).instantiateInitialViewController()!
-        self.view.addSubview(vc.view)
-        self.addChildViewController(vc)
-        vc.didMove(toParentViewController: self)
+        if Auth.auth().currentUser == nil {
+            let vc = UIStoryboard(name: "LoginSplashView", bundle: nil).instantiateInitialViewController()!
+            self.view.addSubview(vc.view)
+            self.addChildViewController(vc)
+            vc.didMove(toParentViewController: self)
+        }else{
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+            self.view.addSubview(vc.view)
+            self.addChildViewController(vc)
+            vc.didMove(toParentViewController: self)
+        }
+        
     }
     
     @objc func operationDetected(_ notification: NSNotification){
