@@ -53,7 +53,7 @@ class BalanceViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        reloadView()
+         reloadView()
     }
     
     func reloadView() {

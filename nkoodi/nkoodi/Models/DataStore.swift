@@ -47,7 +47,7 @@ class DataStore {
     func getTransactionsHistory(completion: @escaping ((ascTransactionsHistory: TransactionsHistory, desTransactionsHistory: TransactionsHistory)) -> ()){
         //To be implemented
         let userId = Auth.auth().currentUser!.uid
-        ref.child("users").child(userId).observeSingleEvent(of: .value, with: {snapshot in
+        ref.child("users").child(userId).observe(.childAdded, with: {snapshot in
             if let user = snapshot.value as? NSDictionary, let balance = user["current_balance"] as? Double, let balanceHistory = user["balance_history"] as? NSDictionary{
                 let balanceHistoryArr = balanceHistory.allValues
                 var transactionsHistory: TransactionsHistory = TransactionsHistory.init(currentBalance: 0, transactions: [])
