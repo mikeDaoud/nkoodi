@@ -32,6 +32,7 @@
 		D40F3CFB21138E90006FBE11 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F3CFA21138E90006FBE11 /* Category.swift */; };
 		D40F3CFD21139428006FBE11 /* Stores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40F3CFC21139428006FBE11 /* Stores.storyboard */; };
 		D40F3CFF21139631006FBE11 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F3CFE21139631006FBE11 /* StoreCell.swift */; };
+		D40F3D0321139E7F006FBE11 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F3D0221139E7F006FBE11 /* SettingCell.swift */; };
 		D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D0332112504F00329A79 /* LoginSplashViewController.swift */; };
 		D4B8D039211272DE00329A79 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D037211272DE00329A79 /* QRReaderViewController.swift */; };
 		D4B8D03A211272DE00329A79 /* QRReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B8D038211272DE00329A79 /* QRReader.storyboard */; };
@@ -70,6 +71,7 @@
 		D40F3CFA21138E90006FBE11 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D40F3CFC21139428006FBE11 /* Stores.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stores.storyboard; sourceTree = "<group>"; };
 		D40F3CFE21139631006FBE11 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		D40F3D0221139E7F006FBE11 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		D4B8D0332112504F00329A79 /* LoginSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSplashViewController.swift; sourceTree = "<group>"; };
 		D4B8D037211272DE00329A79 /* QRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		D4B8D038211272DE00329A79 /* QRReader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRReader.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				7008144021135C4F007C96A7 /* TransactionHistroyCell.xib */,
 				7008144221135DD7007C96A7 /* TransactionHistroyCell.swift */,
 				D40F3CFE21139631006FBE11 /* StoreCell.swift */,
+				D40F3D0221139E7F006FBE11 /* SettingCell.swift */,
 			);
 			path = customCells;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				8A335A3021129A10006517FC /* PopupManager.swift in Sources */,
 				D40F3CFB21138E90006FBE11 /* Category.swift in Sources */,
 				8A14BD9721135FD7005DFD6F /* UIView+shadow.swift in Sources */,
+				D40F3D0321139E7F006FBE11 /* SettingCell.swift in Sources */,
 				D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */,
 				8A5A9DE3211396AF000B59FA /* MoreViewController.swift in Sources */,
 				8A335A2A21126A51006517FC /* CodeGenerator.swift in Sources */,
