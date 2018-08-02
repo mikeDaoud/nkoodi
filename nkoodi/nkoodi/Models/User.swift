@@ -17,7 +17,7 @@ struct User {
         return ["name" : self.name,
                 "qr": self.qr,
                 "id" : self.id,
-                "current_balance" : 0.0]
+                "current_balance" : 100.0]
     }
 }
 

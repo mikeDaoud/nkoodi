@@ -48,7 +48,7 @@ class DataStore {
         //To be implemented
     }
     
-    func getUserNameWithQR(_ qr: String, completion: @escaping (User?)->()){
+    func getUserWithQR(_ qr: String, completion: @escaping (User?)->()){
         ref.child("users").observeSingleEvent(of: .value, with: { snapShot in
             guard let users = snapShot.value as? NSDictionary,
             let keys = users.allKeys as? [String] else{
@@ -73,7 +73,7 @@ class DataStore {
                                           "amount_changed" : amount,
                                           "vendor" : "A friend",
                                           "operation" : "recieved"]
-        ref.child("users").child(user.id).child("balance_history").updateChildValues(transaction)
+        ref.child("users").child(user.id).child("balance_history").childByAutoId().updateChildValues(transaction)
         ref.child("users").child(user.id).child("current_balance").observeSingleEvent(of: .value, with: {snapshot in
             if let oldAmount = snapshot.value as? Double{
                 let newAmount = oldAmount + amount
@@ -105,7 +105,6 @@ class DataStore {
         }
         
     }
-    
     
     
 }

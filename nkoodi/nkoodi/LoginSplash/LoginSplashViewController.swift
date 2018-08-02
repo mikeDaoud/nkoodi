@@ -43,7 +43,7 @@ class LoginSplashViewController: UIViewController {
     }
     
     private func proceedToApp(){
-//        DataStore.shared.beginObservingOpeartions(userId: Auth.auth().currentUser!.uid)
+        DataStore.shared.beginObservingOpeartions(userId: Auth.auth().currentUser!.uid)
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         present(vc!, animated: true, completion: nil)
     }
