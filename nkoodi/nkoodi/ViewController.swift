@@ -10,7 +10,7 @@ import UIKit
 import BATabBarController
 
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
     var baTabBarController: BATabBarController!
     
