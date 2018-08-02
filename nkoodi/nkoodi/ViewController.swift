@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         let vc5 = UIViewController()
         vc4.view.backgroundColor = UIColor(hex: 0x00c6c80)
         vc5.view.backgroundColor = UIColor(hex: 0x00c6c10)
-        
         let option1 = NSMutableAttributedString(string: "QR")
         option1.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: 0x757575), range: NSRange(location: 0, length: option1.length))
         option1.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Acens", size: 12), range: NSRange(location: 0, length: option1.length))

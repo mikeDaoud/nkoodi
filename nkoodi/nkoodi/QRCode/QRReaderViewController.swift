@@ -28,6 +28,7 @@ class QRReaderViewController: UIViewController {
         qrCodeTextFieldHasChanged = { text in
             self.transferContactNameLabel.text = "user name: " + text
         }
+        self.view.backgroundColor = UIColor(hex: 0x00c6c10)
     }
     
     @IBAction func camerButtonTapped(_ sender: Any) {
