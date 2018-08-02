@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         window?.rootViewController = AppContainerViewController()
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
 //        let statusBar: UIView? = UIApplication.shared.value(forKey: "statusBar") as? UIView
 //        statusBar?.backgroundColor = UIColor.init(r: 246, g: 246, b: 247)
 //        UIApplication.shared.statusBarStyle = .default

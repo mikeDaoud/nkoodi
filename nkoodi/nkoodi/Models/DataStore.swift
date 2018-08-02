@@ -80,6 +80,13 @@ class DataStore {
                 self.ref.child("users").child(user.id).child("current_balance").setValue(newAmount)
             }
         })
+        let userId = Auth.auth().currentUser!.uid
+        ref.child("users").child(userId).child("current_balance").observeSingleEvent(of: .value, with: {snapshot in
+            if let oldAmount = snapshot.value as? Double{
+                let newAmount = oldAmount - amount
+                self.ref.child("users").child(userId).child("current_balance").setValue(newAmount)
+            }
+        })
     }
     
     func beginObservingOpeartions(userId: String){

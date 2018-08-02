@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,38 +48,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shimaa Magdi" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsP-Xd-tEf" userLabel="NameLabel">
-                                <rect key="frame" x="130" y="93" width="115.5" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-----" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsP-Xd-tEf" userLabel="NameLabel">
+                                <rect key="frame" x="159" y="70" width="58.5" height="39.5"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8Y-ME-9Rv" userLabel="country">
+                                <rect key="frame" x="178" y="124.5" width="20" height="22.5"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lY4-6O-7hQ">
-                                <rect key="frame" x="37" y="193.5" width="300" height="300"/>
+                                <rect key="frame" x="50" y="197" width="275" height="275"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="5Ud-nY-XQC"/>
-                                    <constraint firstAttribute="width" constant="300" id="9e5-fy-bUo"/>
+                                    <constraint firstAttribute="width" secondItem="lY4-6O-7hQ" secondAttribute="height" id="Q3v-fV-cxK"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YT8589" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcs-0S-WGR" userLabel="NameLabel">
-                                <rect key="frame" x="154" y="505.5" width="67.5" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcs-0S-WGR" userLabel="code">
+                                <rect key="frame" x="172.5" y="497" width="30" height="34"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KB-9h-fPf" userLabel="instruction">
+                                <rect key="frame" x="20" y="563" width="335" height="34"/>
+                                <string key="text">There's also a built-in QR reader in the Wallet app on iPhone and iPod. 
+To access the scanner, open the app, click on the plus button at the top of the "Passes" section, then tap on Scan Code to Add a Pass</string>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.42352941176470588" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lY4-6O-7hQ" firstAttribute="centerY" secondItem="ZWp-pw-D2j" secondAttribute="centerY" id="8O4-2M-mgF"/>
-                            <constraint firstItem="lsP-Xd-tEf" firstAttribute="top" secondItem="ZWp-pw-D2j" secondAttribute="top" constant="73" id="8S5-g7-Fsz"/>
+                            <constraint firstItem="H8Y-ME-9Rv" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="4I1-gs-sZk"/>
+                            <constraint firstItem="4KB-9h-fPf" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="4xm-HJ-0O9"/>
+                            <constraint firstItem="lsP-Xd-tEf" firstAttribute="top" secondItem="ZWp-pw-D2j" secondAttribute="top" constant="50" id="8S5-g7-Fsz"/>
+                            <constraint firstItem="ZWp-pw-D2j" firstAttribute="bottom" secondItem="4KB-9h-fPf" secondAttribute="bottom" constant="70" id="CQh-Vn-5fX"/>
                             <constraint firstItem="lY4-6O-7hQ" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="GTa-AI-v3L"/>
+                            <constraint firstItem="lY4-6O-7hQ" firstAttribute="leading" secondItem="ZWp-pw-D2j" secondAttribute="leading" constant="50" id="U0R-A0-5YZ"/>
+                            <constraint firstItem="ZWp-pw-D2j" firstAttribute="trailing" secondItem="4KB-9h-fPf" secondAttribute="trailing" constant="20" id="W70-lC-T7W"/>
                             <constraint firstItem="lsP-Xd-tEf" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="afk-lH-f6B"/>
+                            <constraint firstItem="lY4-6O-7hQ" firstAttribute="top" secondItem="H8Y-ME-9Rv" secondAttribute="bottom" constant="50" id="cGJ-2W-VAU"/>
                             <constraint firstItem="pcs-0S-WGR" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="gAm-uz-QEZ"/>
-                            <constraint firstItem="pcs-0S-WGR" firstAttribute="top" secondItem="lY4-6O-7hQ" secondAttribute="bottom" constant="12" id="upf-df-uRb"/>
+                            <constraint firstItem="4KB-9h-fPf" firstAttribute="leading" secondItem="ZWp-pw-D2j" secondAttribute="leading" constant="20" id="q3y-lq-taL"/>
+                            <constraint firstItem="H8Y-ME-9Rv" firstAttribute="top" secondItem="lsP-Xd-tEf" secondAttribute="bottom" constant="15" id="uPK-te-vx9"/>
+                            <constraint firstItem="pcs-0S-WGR" firstAttribute="top" secondItem="lY4-6O-7hQ" secondAttribute="bottom" constant="25" id="upf-df-uRb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZWp-pw-D2j"/>
                     </view>
                     <connections>
+                        <outlet property="balance" destination="H8Y-ME-9Rv" id="lB5-vK-SPZ"/>
                         <outlet property="lblCode" destination="pcs-0S-WGR" id="LnI-um-ElH"/>
                         <outlet property="lblName" destination="lsP-Xd-tEf" id="8lt-VD-ijY"/>
                         <outlet property="qrCodeImageView" destination="lY4-6O-7hQ" id="iZV-YV-fEI"/>
