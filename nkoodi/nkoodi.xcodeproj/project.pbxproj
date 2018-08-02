@@ -26,6 +26,9 @@
 		8A9BDB5421122607001070F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5321122607001070F5 /* Assets.xcassets */; };
 		8A9BDB5721122607001070F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5521122607001070F5 /* LaunchScreen.storyboard */; };
 		8A9BDB5F2112271D001070F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5E2112271D001070F5 /* GoogleService-Info.plist */; };
+		D40F3CF721138D64006FBE11 /* Stores.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40F3CF621138D63006FBE11 /* Stores.xib */; };
+		D40F3CF921138D7A006FBE11 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F3CF821138D7A006FBE11 /* StoresViewController.swift */; };
+		D40F3CFB21138E90006FBE11 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40F3CFA21138E90006FBE11 /* Category.swift */; };
 		D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D0332112504F00329A79 /* LoginSplashViewController.swift */; };
 		D4B8D039211272DE00329A79 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8D037211272DE00329A79 /* QRReaderViewController.swift */; };
 		D4B8D03A211272DE00329A79 /* QRReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B8D038211272DE00329A79 /* QRReader.storyboard */; };
@@ -58,6 +61,9 @@
 		8A9BDB5821122607001070F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A9BDB5E2112271D001070F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99108625AC17317141A7F44A /* Pods-nkoodi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nkoodi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nkoodi/Pods-nkoodi.debug.xcconfig"; sourceTree = "<group>"; };
+		D40F3CF621138D63006FBE11 /* Stores.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Stores.xib; sourceTree = "<group>"; };
+		D40F3CF821138D7A006FBE11 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
+		D40F3CFA21138E90006FBE11 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D4B8D0332112504F00329A79 /* LoginSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSplashViewController.swift; sourceTree = "<group>"; };
 		D4B8D037211272DE00329A79 /* QRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		D4B8D038211272DE00329A79 /* QRReader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRReader.storyboard; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 				8A335A242112617C006517FC /* User.swift */,
 				8A335A27211261D1006517FC /* TransactionsHistory.swift */,
 				8A335A2921126A51006517FC /* CodeGenerator.swift */,
+				D40F3CFA21138E90006FBE11 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +179,7 @@
 		8A9BDB4B21122607001070F5 /* nkoodi */ = {
 			isa = PBXGroup;
 			children = (
+				D40F3CF521138D43006FBE11 /* SettingStore */,
 				8A14BD9521135FC3005DFD6F /* extensions */,
 				7008143F21135C30007C96A7 /* customCells */,
 				8A335A2E211299FD006517FC /* PopupManager */,
@@ -191,6 +199,15 @@
 				D4B8D0432113772F00329A79 /* BaseViewController.swift */,
 			);
 			path = nkoodi;
+			sourceTree = "<group>";
+		};
+		D40F3CF521138D43006FBE11 /* SettingStore */ = {
+			isa = PBXGroup;
+			children = (
+				D40F3CF621138D63006FBE11 /* Stores.xib */,
+				D40F3CF821138D7A006FBE11 /* StoresViewController.swift */,
+			);
+			path = SettingStore;
 			sourceTree = "<group>";
 		};
 		D4B8D03B211272E300329A79 /* QRCode */ = {
@@ -278,6 +295,7 @@
 				8A335A21211257E1006517FC /* LoginSplashView.storyboard in Resources */,
 				7008144121135C4F007C96A7 /* TransactionHistroyCell.xib in Resources */,
 				8A9BDB5F2112271D001070F5 /* GoogleService-Info.plist in Resources */,
+				D40F3CF721138D64006FBE11 /* Stores.xib in Resources */,
 				D4B8D03A211272DE00329A79 /* QRReader.storyboard in Resources */,
 				8A9BDB5421122607001070F5 /* Assets.xcassets in Resources */,
 				8A9BDB5221122607001070F5 /* Main.storyboard in Resources */,
@@ -350,12 +368,14 @@
 			files = (
 				8A335A2321126080006517FC /* DataStore.swift in Sources */,
 				8A335A3021129A10006517FC /* PopupManager.swift in Sources */,
+				D40F3CFB21138E90006FBE11 /* Category.swift in Sources */,
 				8A14BD9721135FD7005DFD6F /* UIView+shadow.swift in Sources */,
 				D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */,
 				8A335A2A21126A51006517FC /* CodeGenerator.swift in Sources */,
 				D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */,
 				8A9BDB4F21122607001070F5 /* ViewController.swift in Sources */,
 				D4B8D0442113772F00329A79 /* BaseViewController.swift in Sources */,
+				D40F3CF921138D7A006FBE11 /* StoresViewController.swift in Sources */,
 				8A335A252112617C006517FC /* User.swift in Sources */,
 				7008144321135DD7007C96A7 /* TransactionHistroyCell.swift in Sources */,
 				8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */,
