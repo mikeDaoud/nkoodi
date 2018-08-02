@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6C3A82F1A2A8C6DB769CDB7F /* Pods_nkoodi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB365502B92D7A3116B595B /* Pods_nkoodi.framework */; };
+		7008144121135C4F007C96A7 /* TransactionHistroyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7008144021135C4F007C96A7 /* TransactionHistroyCell.xib */; };
+		7008144321135DD7007C96A7 /* TransactionHistroyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7008144221135DD7007C96A7 /* TransactionHistroyCell.swift */; };
 		7062B55F21123C9E009F3E26 /* Acens.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7062B55E21123C9D009F3E26 /* Acens.ttf */; };
 		8A335A21211257E1006517FC /* LoginSplashView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A335A20211257E1006517FC /* LoginSplashView.storyboard */; };
 		8A335A2321126080006517FC /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A2221126080006517FC /* DataStore.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		3FB365502B92D7A3116B595B /* Pods_nkoodi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nkoodi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7008144021135C4F007C96A7 /* TransactionHistroyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistroyCell.xib; sourceTree = "<group>"; };
+		7008144221135DD7007C96A7 /* TransactionHistroyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistroyCell.swift; sourceTree = "<group>"; };
 		7062B55E21123C9D009F3E26 /* Acens.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Acens.ttf; sourceTree = "<group>"; };
 		8A335A20211257E1006517FC /* LoginSplashView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSplashView.storyboard; sourceTree = "<group>"; };
 		8A335A2221126080006517FC /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 				3FB365502B92D7A3116B595B /* Pods_nkoodi.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7008143F21135C30007C96A7 /* customCells */ = {
+			isa = PBXGroup;
+			children = (
+				7008144021135C4F007C96A7 /* TransactionHistroyCell.xib */,
+				7008144221135DD7007C96A7 /* TransactionHistroyCell.swift */,
+			);
+			path = customCells;
 			sourceTree = "<group>";
 		};
 		7062B55D21123C7E009F3E26 /* font */ = {
@@ -144,6 +157,7 @@
 		8A9BDB4B21122607001070F5 /* nkoodi */ = {
 			isa = PBXGroup;
 			children = (
+				7008143F21135C30007C96A7 /* customCells */,
 				8A335A2E211299FD006517FC /* PopupManager */,
 				8A335A2B21128EC4006517FC /* AppContainer */,
 				8A335A26211261B0006517FC /* Models */,
@@ -245,6 +259,7 @@
 				7062B55F21123C9E009F3E26 /* Acens.ttf in Resources */,
 				8A9BDB5721122607001070F5 /* LaunchScreen.storyboard in Resources */,
 				8A335A21211257E1006517FC /* LoginSplashView.storyboard in Resources */,
+				7008144121135C4F007C96A7 /* TransactionHistroyCell.xib in Resources */,
 				8A9BDB5F2112271D001070F5 /* GoogleService-Info.plist in Resources */,
 				D4B8D03A211272DE00329A79 /* QRReader.storyboard in Resources */,
 				8A9BDB5421122607001070F5 /* Assets.xcassets in Resources */,
@@ -321,6 +336,7 @@
 				D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */,
 				8A9BDB4F21122607001070F5 /* ViewController.swift in Sources */,
 				8A335A252112617C006517FC /* User.swift in Sources */,
+				7008144321135DD7007C96A7 /* TransactionHistroyCell.swift in Sources */,
 				8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */,
 				D4EE397221122C2700AF8D73 /* BalanceViewController.swift in Sources */,
 				8A335A2D21128EDD006517FC /* AppContainerViewController.swift in Sources */,

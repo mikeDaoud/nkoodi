@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AppContainerViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class AppContainerViewController: UIViewController {
         self.view.addSubview(vc.view)
         self.addChildViewController(vc)
         vc.didMove(toParentViewController: self)
+        DataStore.shared.beginObservingOpeartions(userId: Auth.auth().currentUser!.uid)
     }
     
     @objc func operationDetected(_ notification: NSNotification){
