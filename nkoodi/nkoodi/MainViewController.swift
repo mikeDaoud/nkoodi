@@ -36,14 +36,14 @@ class MainViewController: UIViewController {
             let userData = ref.child("users").child(userID)
             userData.child("qr").observeSingleEvent(of: .value, with: { snapShot in
                 if let qrCode = snapShot.value as? String{
-                        self.lblCode.text = qrCode
-                        self.qrCodeImageView.image = {
-                            var qrCode = QRCode(qrCode)!
-                            qrCode.size = self.qrCodeImageView.bounds.size
-                            qrCode.color = CIColor(rgba: "fff")
-                            qrCode.backgroundColor = CIColor(rgba: "006c35")
-                            return qrCode.image
-                        }()
+                    self.lblCode.text = qrCode
+                    self.qrCodeImageView.image = {
+                        var qrCode = QRCode(qrCode)!
+                        qrCode.size = self.qrCodeImageView.bounds.size
+                        qrCode.color = CIColor(rgba: "fff")
+                        qrCode.backgroundColor = CIColor(rgba: "006c35")
+                        return qrCode.image
+                    }()
                 }
             })
             
