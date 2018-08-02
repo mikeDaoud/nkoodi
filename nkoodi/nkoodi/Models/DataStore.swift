@@ -44,8 +44,31 @@ class DataStore {
         }
     }
     
-    func getTransactionsHistory(completion: (TransactionsHistory?) -> ()){
+    func getTransactionsHistory(completion: @escaping ((ascTransactionsHistory: TransactionsHistory, desTransactionsHistory: TransactionsHistory)) -> ()){
         //To be implemented
+        let userId = Auth.auth().currentUser!.uid
+        ref.child("users").child(userId).child("balance_history").observeSingleEvent(of: .value, with: {snapshot in
+            if let balanceHistory = snapshot.value as? NSDictionary{
+                let balanceHistoryArr = balanceHistory.allValues
+                var transactionsHistory: TransactionsHistory = TransactionsHistory.init(transactions: [])
+                for item in balanceHistoryArr {
+                    if let item = item as? NSDictionary {
+                        let transaction = Transaction(date: item["date"] as? Double ?? 0,
+                                                      amountChanged: item["amount_changed"] as? Double ?? 0,
+                                                      operation: TransactionOperation(rawValue: item["operation"] as? String ?? "")  ?? .none,
+                                                      vendor: item["vendor"] as? String ?? "")
+                        transactionsHistory.transactions.append(transaction)
+                    }
+                }
+                let ascHistory: TransactionsHistory = TransactionsHistory(transactions: transactionsHistory.transactions.sorted(by: { t1, t2 in
+                    return t1.date <= t2.date
+                }))
+                let desHistory: TransactionsHistory = TransactionsHistory(transactions: transactionsHistory.transactions.sorted(by: { t1, t2 in
+                    return t1.date >= t2.date
+                    }))
+                completion((ascHistory, desHistory))
+            }
+        })
     }
     
     func getUserWithQR(_ qr: String, completion: @escaping (User?)->()){

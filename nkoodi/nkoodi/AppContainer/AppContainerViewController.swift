@@ -26,6 +26,7 @@ class AppContainerViewController: UIViewController {
             self.view.addSubview(vc.view)
             self.addChildViewController(vc)
             vc.didMove(toParentViewController: self)
+            DataStore.shared.beginObservingOpeartions(userId: Auth.auth().currentUser!.uid)
         }
         
     }

@@ -16,6 +16,9 @@ class BalanceViewController: UIViewController {
     @IBOutlet weak var lblBalance: UILabel!
     @IBOutlet weak var historyTable: UITableView!
     
+    //vars
+    var transactionsHistory: (ascTransactionsHistory: TransactionsHistory, desTransactionsHistory: TransactionsHistory)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var arr = [ChartDataEntry]()
@@ -38,10 +41,18 @@ class BalanceViewController: UIViewController {
         lineChart.formLineWidth = 0
         lineChart.drawValuesEnabled = true
         
+        historyTable.register(UINib(nibName: "TransactionHistroyCell", bundle: nil), forCellReuseIdentifier: "TransactionHistroyCell")
+        historyTable.rowHeight = UITableViewAutomaticDimension
+        historyTable.estimatedRowHeight = 100
+        historyTable.allowsSelection = false
         
         let data = LineChartData(dataSet: lineChart)
         chartView.data = data
         chartView.chartDescription?.text = nil
+        DataStore.shared.getTransactionsHistory(completion: { transactionsHistory in
+            self.transactionsHistory = transactionsHistory
+            self.reloadView()
+        })
     }
     
     static func create() -> BalanceViewController {
@@ -49,20 +60,30 @@ class BalanceViewController: UIViewController {
             BalanceViewController.ID) as! BalanceViewController
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadView()
+    }
     
+    func reloadView() {
+//        CATransaction.begin()
+//        CATransaction.setCompletionBlock({
+//
+//        })
+        historyTable.reloadData()
+//        CATransaction.commit()
+    }
 }
 
 extension BalanceViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return transactionsHistory?.desTransactionsHistory.transactions.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionHistroyCell", for: indexPath) as! TransactionHistroyCell
+        cell.configure(transaction: (transactionsHistory?.desTransactionsHistory.transactions ?? [])[indexPath.row])
         return cell
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
+
 }
