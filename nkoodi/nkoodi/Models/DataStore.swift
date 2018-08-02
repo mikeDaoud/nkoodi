@@ -92,11 +92,12 @@ class DataStore {
     }
     
     func transfer(amount: Double, to user: User, completion: (Bool) -> ()){
-        var transaction : [AnyHashable : Any] = ["date" : Date().timeIntervalSince1970,
+        let transaction : [AnyHashable : Any] = ["date" : Date().timeIntervalSince1970,
                                           "amount_changed" : amount,
                                           "vendor" : "A friend",
                                           "operation" : "recieved"]
         ref.child("users").child(user.id).child("balance_history").childByAutoId().updateChildValues(transaction)
+        
         ref.child("users").child(user.id).child("current_balance").observeSingleEvent(of: .value, with: {snapshot in
             if let oldAmount = snapshot.value as? Double{
                 let newAmount = oldAmount + amount
@@ -104,6 +105,11 @@ class DataStore {
             }
         })
         let userId = Auth.auth().currentUser!.uid
+        let transferTransaction : [AnyHashable : Any] = ["date" : Date().timeIntervalSince1970,
+                                                         "amount_changed" : amount * -1,
+                                                         "vendor" : user.name,
+                                                         "operation" : "transfer"]
+        ref.child("users").child(userId).child("balance_history").childByAutoId().updateChildValues(transferTransaction)
         ref.child("users").child(userId).child("current_balance").observeSingleEvent(of: .value, with: {snapshot in
             if let oldAmount = snapshot.value as? Double{
                 let newAmount = oldAmount - amount
