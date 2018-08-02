@@ -9,6 +9,7 @@
 import UIKit
 import Charts
 
+
 class BalanceViewController: BaseViewController {
     static let ID = "BalanceViewController"
     
@@ -19,7 +20,7 @@ class BalanceViewController: BaseViewController {
     //vars
     var transactionsHistory: (ascTransactionsHistory: TransactionsHistory, desTransactionsHistory: TransactionsHistory)? {
         didSet {
-            lblBalance.text = "\(transactionsHistory?.ascTransactionsHistory.currentBalance ?? 0) ASR"
+            chartDataEntryArr = []
             var accumlatedBalance: Double = 0
             var counter: Double = 0
             for trans in transactionsHistory!.desTransactionsHistory.transactions {
@@ -27,8 +28,11 @@ class BalanceViewController: BaseViewController {
                 chartDataEntryArr.append(ChartDataEntry(x: counter, y: accumlatedBalance))
                 counter += 1
             }
+            reloadView()
         }
     }
+    
+    var transactions: [Transaction] = []
     
     var chartDataEntryArr: [ChartDataEntry] = []
     
@@ -41,8 +45,17 @@ class BalanceViewController: BaseViewController {
         historyTable.allowsSelection = false
 
         DataStore.shared.getTransactionsHistory(completion: { transactionsHistory in
-            self.transactionsHistory = transactionsHistory
+            self.transactions.append(transactionsHistory)
+            let ascHistory: TransactionsHistory = TransactionsHistory(transactions: self.transactions.sorted(by: { t1, t2 in
+                return t1.date <= t2.date
+            }))
+            let desHistory: TransactionsHistory = TransactionsHistory(transactions: self.transactions.sorted(by: { t1, t2 in
+                return t1.date >= t2.date
+            }))
+            self.transactionsHistory = (ascHistory, desHistory)
             self.reloadView()
+        },balanceCompletion: { b in
+            self.lblBalance.text = "\(b) ASR"
         })
     }
     
@@ -59,6 +72,32 @@ class BalanceViewController: BaseViewController {
     func reloadView() {
         historyTable.reloadData()
         
+//        let lineChart = LineChartDataSet(values: chartDataEntryArr, label: nil)
+//        lineChart.colors = [NSUIColor.clear]
+//        lineChart.fillColor = UIColor.red
+//        lineChart.mode = .cubicBezier
+//        lineChart.drawCirclesEnabled = false
+//        lineChart.drawFilledEnabled = true
+//        lineChart.lineCapType = .round
+//        lineChart.formLineWidth = 0
+//        lineChart.drawValuesEnabled = true
+//        let data = LineChartData(dataSet: lineChart)
+//        chartView.data = data
+//        chartView.lineData?.notifyDataChanged()
+//        chartView.notifyDataSetChanged()
+//        chartView.chartDescription?.text = nil
+        
+        
+        setupChart()
+        
+        
+    }
+    
+    func setupChart() {
+       
+        chartView.backgroundColor = UIColor.clear
+
+       
         let lineChart = LineChartDataSet(values: chartDataEntryArr, label: nil)
         lineChart.colors = [NSUIColor.clear]
         lineChart.fillColor = UIColor.red
@@ -69,8 +108,16 @@ class BalanceViewController: BaseViewController {
         lineChart.formLineWidth = 0
         lineChart.drawValuesEnabled = true
         let data = LineChartData(dataSet: lineChart)
-        chartView.data = data
         chartView.chartDescription?.text = nil
+        data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 9)!)
+        chartView.data = data
+        chartView.chartDescription?.text = ""
+        chartView.animate(xAxisDuration: 2, yAxisDuration: 2)
+    }
+    
+    func updateChartData() {
+        chartView.data = nil
+        chartView.notifyDataSetChanged()
     }
 }
 
@@ -85,4 +132,11 @@ extension BalanceViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
+}
+
+
+private class CubicLineSampleFillFormatter: IFillFormatter {
+    func getFillLinePosition(dataSet: ILineChartDataSet, dataProvider: LineChartDataProvider) -> CGFloat {
+        return -10
+    }
 }
