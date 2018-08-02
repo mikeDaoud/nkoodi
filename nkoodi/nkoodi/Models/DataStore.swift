@@ -25,6 +25,11 @@ class DataStore {
         }
     }
     
+    func logoutCurrentUser(){
+        try? Auth.auth().signOut()
+        UIApplication.shared.keyWindow?.rootViewController =  UIStoryboard(name: "LoginSplashView", bundle: nil).instantiateInitialViewController()!
+    }
+    
     func getUserData(completion: @escaping (User?)->()){
         if let userId = Auth.auth().currentUser?.uid{
             ref.child("users").child(userId).observeSingleEvent(of: .value, with: {snapShot in

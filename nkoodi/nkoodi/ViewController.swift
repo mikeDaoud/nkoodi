@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let vc2 = BalanceViewController.create()
         let vc3 = QRReaderViewController.create()
         let vc4 = UIViewController()
-        let vc5 = UIViewController()
+        let vc5 = MoreViewController.create()
         vc4.view.backgroundColor = UIColor(hex: 0x00c6c80)
         vc5.view.backgroundColor = UIColor(hex: 0x00c6c10)
         let option1 = NSMutableAttributedString(string: "QR")
