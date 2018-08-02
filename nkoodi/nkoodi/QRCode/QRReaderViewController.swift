@@ -29,7 +29,11 @@ class QRReaderViewController: BaseViewController {
         super.viewDidLoad()
         qrCodeTextField.delegate = self
         qrCodeTextFieldHasChanged = { text in
-            self.transferContactNameLabel.text = "user name: " + text
+            DataStore.shared.getUserWithQR(text, completion: { (user) in
+                guard let user = user else { return }
+                self.transferContactNameLabel.text = "Will transfer to: " + user.name
+            })
+            //self.transferContactNameLabel.text = "user name: " + text
         }
         self.view.backgroundColor = UIColor(hex: 0x00c6c10)
         ////
@@ -124,7 +128,8 @@ class QRReaderViewController: BaseViewController {
 }
 
 extension QRReaderViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         guard let text = textField.text else { return true }
         qrCodeTextFieldHasChanged?(text)
         return true

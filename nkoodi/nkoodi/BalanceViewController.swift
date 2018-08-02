@@ -20,39 +20,26 @@ class BalanceViewController: BaseViewController {
     var transactionsHistory: (ascTransactionsHistory: TransactionsHistory, desTransactionsHistory: TransactionsHistory)? {
         didSet {
             lblBalance.text = "\(transactionsHistory?.ascTransactionsHistory.currentBalance ?? 0) ASR"
+            var accumlatedBalance: Double = 0
+            var counter: Double = 0
+            for trans in transactionsHistory!.desTransactionsHistory.transactions {
+                accumlatedBalance += trans.amountChanged
+                chartDataEntryArr.append(ChartDataEntry(x: counter, y: accumlatedBalance))
+                counter += 1
+            }
         }
     }
     
+    var chartDataEntryArr: [ChartDataEntry] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        var arr = [ChartDataEntry]()
-        let yy: Double = 10
-        var minus = true
-        for i in 0..<10{
-            let y: Double
-            if minus { y = yy - Double(i) } else { y = yy + Double(i) }
-            arr.append(ChartDataEntry(x: Double(i), y: y))
-            minus = !minus
-        }
-        
-        let lineChart = LineChartDataSet(values: arr, label: nil)
-        lineChart.colors = [NSUIColor.clear]
-        lineChart.fillColor = UIColor.red
-        lineChart.mode = .cubicBezier
-        lineChart.drawCirclesEnabled = false
-        lineChart.drawFilledEnabled = true
-        lineChart.lineCapType = .round
-        lineChart.formLineWidth = 0
-        lineChart.drawValuesEnabled = true
-        
+
         historyTable.register(UINib(nibName: "TransactionHistroyCell", bundle: nil), forCellReuseIdentifier: "TransactionHistroyCell")
         historyTable.rowHeight = UITableViewAutomaticDimension
         historyTable.estimatedRowHeight = 100
         historyTable.allowsSelection = false
-        
-        let data = LineChartData(dataSet: lineChart)
-        chartView.data = data
-        chartView.chartDescription?.text = nil
+
         DataStore.shared.getTransactionsHistory(completion: { transactionsHistory in
             self.transactionsHistory = transactionsHistory
             self.reloadView()
@@ -70,12 +57,20 @@ class BalanceViewController: BaseViewController {
     }
     
     func reloadView() {
-//        CATransaction.begin()
-//        CATransaction.setCompletionBlock({
-//
-//        })
         historyTable.reloadData()
-//        CATransaction.commit()
+        
+        let lineChart = LineChartDataSet(values: chartDataEntryArr, label: nil)
+        lineChart.colors = [NSUIColor.clear]
+        lineChart.fillColor = UIColor.red
+        lineChart.mode = .cubicBezier
+        lineChart.drawCirclesEnabled = false
+        lineChart.drawFilledEnabled = true
+        lineChart.lineCapType = .round
+        lineChart.formLineWidth = 0
+        lineChart.drawValuesEnabled = true
+        let data = LineChartData(dataSet: lineChart)
+        chartView.data = data
+        chartView.chartDescription?.text = nil
     }
 }
 
