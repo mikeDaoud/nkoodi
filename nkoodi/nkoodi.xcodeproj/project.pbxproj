@@ -14,6 +14,8 @@
 		8A335A252112617C006517FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A242112617C006517FC /* User.swift */; };
 		8A335A28211261D1006517FC /* TransactionsHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A27211261D1006517FC /* TransactionsHistory.swift */; };
 		8A335A2A21126A51006517FC /* CodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A2921126A51006517FC /* CodeGenerator.swift */; };
+		8A335A2D21128EDD006517FC /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A2C21128EDD006517FC /* AppContainerViewController.swift */; };
+		8A335A3021129A10006517FC /* PopupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A335A2F21129A10006517FC /* PopupManager.swift */; };
 		8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9BDB4C21122607001070F5 /* AppDelegate.swift */; };
 		8A9BDB4F21122607001070F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9BDB4E21122607001070F5 /* ViewController.swift */; };
 		8A9BDB5221122607001070F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9BDB5021122607001070F5 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		8A335A242112617C006517FC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8A335A27211261D1006517FC /* TransactionsHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHistory.swift; sourceTree = "<group>"; };
 		8A335A2921126A51006517FC /* CodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGenerator.swift; sourceTree = "<group>"; };
+		8A335A2C21128EDD006517FC /* AppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
+		8A335A2F21129A10006517FC /* PopupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupManager.swift; sourceTree = "<group>"; };
 		8A9BDB4921122607001070F5 /* nkoodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nkoodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9BDB4C21122607001070F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A9BDB4E21122607001070F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8A335A2B21128EC4006517FC /* AppContainer */ = {
+			isa = PBXGroup;
+			children = (
+				8A335A2C21128EDD006517FC /* AppContainerViewController.swift */,
+			);
+			path = AppContainer;
+			sourceTree = "<group>";
+		};
+		8A335A2E211299FD006517FC /* PopupManager */ = {
+			isa = PBXGroup;
+			children = (
+				8A335A2F21129A10006517FC /* PopupManager.swift */,
+			);
+			path = PopupManager;
+			sourceTree = "<group>";
+		};
 		8A9BDB4021122607001070F5 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +144,8 @@
 		8A9BDB4B21122607001070F5 /* nkoodi */ = {
 			isa = PBXGroup;
 			children = (
+				8A335A2E211299FD006517FC /* PopupManager */,
+				8A335A2B21128EC4006517FC /* AppContainer */,
 				8A335A26211261B0006517FC /* Models */,
 				D4B8D03B211272E300329A79 /* QRCode */,
 				8A335A1F211257AF006517FC /* LoginSplash */,
@@ -291,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A335A2321126080006517FC /* DataStore.swift in Sources */,
+				8A335A3021129A10006517FC /* PopupManager.swift in Sources */,
 				D4B8D0342112504F00329A79 /* LoginSplashViewController.swift in Sources */,
 				8A335A2A21126A51006517FC /* CodeGenerator.swift in Sources */,
 				D4EE397021122BF200AF8D73 /* QRCodeReaderViewController.swift in Sources */,
@@ -298,6 +321,7 @@
 				8A335A252112617C006517FC /* User.swift in Sources */,
 				8A9BDB4D21122607001070F5 /* AppDelegate.swift in Sources */,
 				D4EE397221122C2700AF8D73 /* BalanceViewController.swift in Sources */,
+				8A335A2D21128EDD006517FC /* AppContainerViewController.swift in Sources */,
 				D4B8D039211272DE00329A79 /* QRReaderViewController.swift in Sources */,
 				D4EE397421122C4900AF8D73 /* MainViewController.swift in Sources */,
 				8A335A28211261D1006517FC /* TransactionsHistory.swift in Sources */,
@@ -444,7 +468,7 @@
 				INFOPLIST_FILE = nkoodi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HajjHackathon.Nkoodi;
+				PRODUCT_BUNDLE_IDENTIFIER = hajjhackathon.com.nkoodi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -463,7 +487,7 @@
 				INFOPLIST_FILE = nkoodi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HajjHackathon.Nkoodi;
+				PRODUCT_BUNDLE_IDENTIFIER = hajjhackathon.com.nkoodi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
