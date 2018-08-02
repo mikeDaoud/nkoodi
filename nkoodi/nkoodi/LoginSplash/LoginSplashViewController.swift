@@ -9,11 +9,36 @@
 import UIKit
 import FirebaseAuth
 
-class LoginSplashViewController: UIViewController {
+class LoginSplashViewController: BaseViewController {
+    
+    @IBOutlet weak var container1: UIView!
+    @IBOutlet weak var conatiner2: UIView!
+    @IBOutlet weak var conatiner3: UIView!
+    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var name: UITextField!
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        container1.layer.cornerRadius = 22
+        container1.layer.borderColor = UIColor.white.cgColor
+        container1.layer.borderWidth = 1
+        
+        conatiner2.layer.cornerRadius = 22
+        conatiner2.layer.borderColor = UIColor.white.cgColor
+        conatiner2.layer.borderWidth = 1
+        
+        conatiner3.layer.cornerRadius = 22
+        conatiner3.layer.borderColor = UIColor.white.cgColor
+        conatiner3.layer.borderWidth = 1
+        
+        loginButton.layer.cornerRadius = 22
+        registerButton.layer.cornerRadius = 22
+    }
     @IBAction func login(_ sender: Any) {
         if let email = email.text,
             let pass = password.text{

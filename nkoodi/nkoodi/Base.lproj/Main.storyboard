@@ -49,7 +49,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KB-9h-fPf" userLabel="instruction">
-                                <rect key="frame" x="35" y="452" width="305" height="40.5"/>
+                                <rect key="frame" x="35" y="566.5" width="305" height="40.5"/>
                                 <string key="text">You can Send your code to anyone who uses the application so that they can transfer money to you
 And you can also let them scan your QR code.</string>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
@@ -116,10 +116,10 @@ And you can also let them scan your QR code.</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ZWp-pw-D2j" firstAttribute="bottom" secondItem="4KB-9h-fPf" secondAttribute="bottom" constant="60" id="25g-gu-ypN"/>
                             <constraint firstItem="HUF-Ip-gsn" firstAttribute="top" secondItem="FWd-Vd-NIb" secondAttribute="bottom" id="3hZ-R7-rVw"/>
                             <constraint firstItem="HUF-Ip-gsn" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="Dko-yG-XPF"/>
                             <constraint firstItem="FWd-Vd-NIb" firstAttribute="top" secondItem="ZWp-pw-D2j" secondAttribute="top" id="G9l-xW-tcb"/>
-                            <constraint firstItem="4KB-9h-fPf" firstAttribute="top" secondItem="hkw-mt-zQw" secondAttribute="bottom" constant="50" id="N71-OH-iJ4"/>
                             <constraint firstItem="hkw-mt-zQw" firstAttribute="centerX" secondItem="ZWp-pw-D2j" secondAttribute="centerX" id="QqW-QR-2sm"/>
                             <constraint firstItem="HUF-Ip-gsn" firstAttribute="leading" secondItem="ZWp-pw-D2j" secondAttribute="leading" constant="35" id="Y6g-y9-if7"/>
                             <constraint firstItem="4KB-9h-fPf" firstAttribute="leading" secondItem="hkw-mt-zQw" secondAttribute="leading" id="YmG-8h-5c2"/>
