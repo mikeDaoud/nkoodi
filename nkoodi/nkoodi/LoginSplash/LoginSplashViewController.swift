@@ -44,6 +44,7 @@ class LoginSplashViewController: BaseViewController {
             let pass = password.text{
             Auth.auth().signIn(withEmail: email, password: pass) { (result, err) in
                 guard err == nil else {return}
+                DataStore.shared.persistUserName(userID: result?.user.uid ?? "")
                 self.proceedToApp()
             }
         }
@@ -57,6 +58,7 @@ class LoginSplashViewController: BaseViewController {
                 let user = User(qr: CodeGenerator.generateRandomCode(),
                                 name: self.name.text ?? "User",
                                 id: userId)
+                UserDefaults.standard.set(self.name.text ?? "User", forKey: "userName")
                 DataStore.shared.initUser(user, completion: { (created) in
                     if created{
                         self.proceedToApp()

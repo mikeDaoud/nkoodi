@@ -102,9 +102,10 @@ class DataStore {
     }
     
     func transfer(amount: Double, to user: User, completion: (Bool) -> ()){
+        let friendName = UserDefaults.standard.string(forKey: "userName") ?? "A Friend"
         let transaction : [AnyHashable : Any] = ["date" : Date().timeIntervalSince1970,
                                           "amount_changed" : amount,
-                                          "vendor" : "A friend",
+                                          "vendor" : friendName,
                                           "operation" : "recieved"]
         ref.child("users").child(user.id).child("balance_history").childByAutoId().updateChildValues(transaction)
         
@@ -143,6 +144,14 @@ class DataStore {
             ref.child("users").child(userId).child("pending_operations").child(opId).child("status").setValue(status)
         }
         
+    }
+    
+    func persistUserName(userID: String){
+        ref.child("users").child(userID).child("name").observeSingleEvent(of: .value, with: {snap in
+            if let name = snap.value as? String{
+                UserDefaults.standard.set(name, forKey: "userName")
+            }
+        })
     }
     
     
